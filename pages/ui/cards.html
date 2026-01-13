@@ -1,0 +1,513 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cards | Prody Admin Panel</title>
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <div class="sidebar-header">
+            <div class="logo">
+                <span class="material-icons logo-icon">dashboard</span>
+                <span class="logo-text">Prody</span>
+            </div>
+            <button class="sidebar-toggle">
+                <span class="material-icons">menu</span>
+            </button>
+        </div>
+
+        <div class="search-box">
+            <span class="material-icons">search</span>
+            <input type="text" placeholder="Search..." />
+            <span class="shortcut">⌘F</span>
+        </div>
+
+        <nav class="sidebar-nav">
+            <a href="../../dashboard.html" class="nav-item">
+                <span class="material-icons">dashboard</span>
+                <span>Dashboard</span>
+            </a>
+            
+            <a href="../../index.html" class="nav-item has-submenu">
+                <span class="material-icons">folder</span>
+                <span>Projects</span>
+                <span class="badge">3</span>
+                <div class="submenu">
+                    <a href="../../index.html" class="submenu-item">
+                        <span class="material-icons">list</span>
+                        <span>All Projects</span>
+                    </a>
+                    <a href="#" class="submenu-item">
+                        <span class="material-icons">add_circle</span>
+                        <span>New Project</span>
+                    </a>
+                </div>
+            </a>
+            
+            <a href="#" class="nav-item has-submenu">
+                <span class="material-icons">edit_note</span>
+                <span>Forms</span>
+                <div class="submenu">
+                    <a href="../forms/basic-forms.html" class="submenu-item">
+                        <span class="material-icons">description</span>
+                        <span>Basic Forms</span>
+                    </a>
+                    <a href="../forms/advanced-forms.html" class="submenu-item">
+                        <span class="material-icons">tune</span>
+                        <span>Advanced Forms</span>
+                    </a>
+                </div>
+            </a>
+            
+            <a href="#" class="nav-item has-submenu">
+                <span class="material-icons">table_chart</span>
+                <span>Tables</span>
+                <div class="submenu">
+                    <a href="../tables/simple-tables.html" class="submenu-item">
+                        <span class="material-icons">grid_on</span>
+                        <span>Simple Tables</span>
+                    </a>
+                    <a href="../tables/data-tables.html" class="submenu-item">
+                        <span class="material-icons">table_view</span>
+                        <span>Data Tables</span>
+                    </a>
+                </div>
+            </a>
+            
+            <a href="#" class="nav-item has-submenu active">
+                <span class="material-icons">widgets</span>
+                <span>UI Elements</span>
+                <div class="submenu">
+                    <a href="cards.html" class="submenu-item active">
+                        <span class="material-icons">dashboard</span>
+                        <span>Cards</span>
+                    </a>
+                    <a href="buttons.html" class="submenu-item">
+                        <span class="material-icons">smart_button</span>
+                        <span>Buttons</span>
+                    </a>
+                    <a href="modals.html" class="submenu-item">
+                        <span class="material-icons">web_asset</span>
+                        <span>Modals</span>
+                    </a>
+                </div>
+            </a>
+            
+            <a href="#" class="nav-item has-submenu">
+                <span class="material-icons">show_chart</span>
+                <span>Charts</span>
+                <div class="submenu">
+                    <a href="../charts/chartjs.html" class="submenu-item">
+                        <span class="material-icons">insert_chart</span>
+                        <span>Chart.js</span>
+                    </a>
+                    <a href="../analytics.html" class="submenu-item">
+                        <span class="material-icons">analytics</span>
+                        <span>Analytics</span>
+                    </a>
+                </div>
+            </a>
+            
+            <a href="../reports.html" class="nav-item has-submenu">
+                <span class="material-icons">description</span>
+                <span>Reports</span>
+                <div class="submenu">
+                    <a href="../reports.html#financial" class="submenu-item">
+                        <span class="material-icons">account_balance</span>
+                        <span>Financial</span>
+                    </a>
+                    <a href="../reports.html#sales" class="submenu-item">
+                        <span class="material-icons">trending_up</span>
+                        <span>Sales</span>
+                    </a>
+                </div>
+            </a>
+            
+            <a href="../companies.html" class="nav-item">
+                <span class="material-icons">business</span>
+                <span>Companies</span>
+                <span class="badge">17</span>
+            </a>
+            <a href="../people.html" class="nav-item">
+                <span class="material-icons">people</span>
+                <span>People</span>
+                <span class="badge">164</span>
+            </a>
+        </nav>
+
+        <div class="sidebar-footer">
+            <a href="#" class="footer-item">
+                <span class="material-icons">help_outline</span>
+                <span>Help center</span>
+            </a>
+            <a href="#" class="footer-item">
+                <span class="material-icons">settings</span>
+                <span>Settings</span>
+            </a>
+        </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-left">
+                <h1>Cards</h1>
+                <p class="header-subtitle">Various card styles and layouts</p>
+            </div>
+            <div class="header-right">
+                <button class="btn-icon">
+                    <span class="material-icons">notifications</span>
+                    <span class="badge-dot"></span>
+                </button>
+                <div class="user-menu">
+                    <img src="https://ui-avatars.com/api/?name=John+Doe&background=3b82f6&color=fff" alt="User" class="user-avatar">
+                    <div>
+                        <div class="user-name">John Doe</div>
+                        <div class="user-role">Administrator</div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Content -->
+        <div class="content">
+            <!-- Basic Cards -->
+            <h2 class="section-title">Basic Cards</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-body">
+                            <h3 class="card-title">Simple Card</h3>
+                            <p>This is a basic card with title and content. Cards are flexible content containers with multiple variants.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-header">
+                            <h3 class="card-title">Card with Header</h3>
+                        </div>
+                        <div class="card-body">
+                            <p>This card has a dedicated header section. Perfect for organizing content with clear titles.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-header">
+                            <h3 class="card-title">Card with Actions</h3>
+                            <button class="btn-icon">
+                                <span class="material-icons">more_vert</span>
+                            </button>
+                        </div>
+                        <div class="card-body">
+                            <p>Cards can include action buttons in the header for quick access to common operations.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Stat Cards -->
+            <h2 class="section-title">Stat Cards</h2>
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="stat-card">
+                        <div class="stat-icon" style="background: linear-gradient(135deg, #3b82f6, #2563eb);">
+                            <span class="material-icons">trending_up</span>
+                        </div>
+                        <div class="stat-content">
+                            <div class="stat-label">Total Revenue</div>
+                            <div class="stat-value">$54,239</div>
+                            <div class="stat-change positive">
+                                <span class="material-icons">arrow_upward</span>
+                                12.5%
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3">
+                    <div class="stat-card">
+                        <div class="stat-icon" style="background: linear-gradient(135deg, #10b981, #059669);">
+                            <span class="material-icons">shopping_cart</span>
+                        </div>
+                        <div class="stat-content">
+                            <div class="stat-label">Total Orders</div>
+                            <div class="stat-value">1,847</div>
+                            <div class="stat-change positive">
+                                <span class="material-icons">arrow_upward</span>
+                                8.3%
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3">
+                    <div class="stat-card">
+                        <div class="stat-icon" style="background: linear-gradient(135deg, #f59e0b, #d97706);">
+                            <span class="material-icons">people</span>
+                        </div>
+                        <div class="stat-content">
+                            <div class="stat-label">New Customers</div>
+                            <div class="stat-value">342</div>
+                            <div class="stat-change negative">
+                                <span class="material-icons">arrow_downward</span>
+                                3.2%
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-3">
+                    <div class="stat-card">
+                        <div class="stat-icon" style="background: linear-gradient(135deg, #8b5cf6, #7c3aed);">
+                            <span class="material-icons">assessment</span>
+                        </div>
+                        <div class="stat-content">
+                            <div class="stat-label">Conversion Rate</div>
+                            <div class="stat-value">4.8%</div>
+                            <div class="stat-change positive">
+                                <span class="material-icons">arrow_upward</span>
+                                2.1%
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Image Cards -->
+            <h2 class="section-title">Cards with Images</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-image">
+                            <img src="https://images.unsplash.com/photo-1486312338219-ce68d2c6f44d?w=600&h=300&fit=crop" alt="Project">
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-title">Project Alpha</h3>
+                            <p>Modern web application development with cutting-edge technologies.</p>
+                            <div class="card-footer">
+                                <button class="btn btn-primary">View Details</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-image">
+                            <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=600&h=300&fit=crop" alt="Project">
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-title">Project Beta</h3>
+                            <p>E-commerce platform with advanced analytics and reporting features.</p>
+                            <div class="card-footer">
+                                <button class="btn btn-primary">View Details</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card">
+                        <div class="card-image">
+                            <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=600&h=300&fit=crop" alt="Project">
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-title">Project Gamma</h3>
+                            <p>Data visualization dashboard for business intelligence insights.</p>
+                            <div class="card-footer">
+                                <button class="btn btn-primary">View Details</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- User Profile Cards -->
+            <h2 class="section-title">Profile Cards</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card profile-card">
+                        <div class="profile-header" style="background: linear-gradient(135deg, #667eea, #764ba2);">
+                            <img src="https://ui-avatars.com/api/?name=Sarah+Johnson&background=fff&color=667eea&size=100" alt="User" class="profile-avatar">
+                        </div>
+                        <div class="card-body text-center">
+                            <h3 class="card-title">Sarah Johnson</h3>
+                            <p class="text-secondary">Senior Developer</p>
+                            <div class="profile-stats">
+                                <div class="stat-item">
+                                    <div class="stat-value">127</div>
+                                    <div class="stat-label">Projects</div>
+                                </div>
+                                <div class="stat-item">
+                                    <div class="stat-value">1.2k</div>
+                                    <div class="stat-label">Followers</div>
+                                </div>
+                                <div class="stat-item">
+                                    <div class="stat-value">485</div>
+                                    <div class="stat-label">Following</div>
+                                </div>
+                            </div>
+                            <div class="profile-actions">
+                                <button class="btn btn-primary">Follow</button>
+                                <button class="btn btn-outline">Message</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card profile-card">
+                        <div class="profile-header" style="background: linear-gradient(135deg, #f093fb, #f5576c);">
+                            <img src="https://ui-avatars.com/api/?name=Michael+Chen&background=fff&color=f5576c&size=100" alt="User" class="profile-avatar">
+                        </div>
+                        <div class="card-body text-center">
+                            <h3 class="card-title">Michael Chen</h3>
+                            <p class="text-secondary">UI/UX Designer</p>
+                            <div class="profile-stats">
+                                <div class="stat-item">
+                                    <div class="stat-value">89</div>
+                                    <div class="stat-label">Projects</div>
+                                </div>
+                                <div class="stat-item">
+                                    <div class="stat-value">856</div>
+                                    <div class="stat-label">Followers</div>
+                                </div>
+                                <div class="stat-item">
+                                    <div class="stat-value">327</div>
+                                    <div class="stat-label">Following</div>
+                                </div>
+                            </div>
+                            <div class="profile-actions">
+                                <button class="btn btn-primary">Follow</button>
+                                <button class="btn btn-outline">Message</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card profile-card">
+                        <div class="profile-header" style="background: linear-gradient(135deg, #4facfe, #00f2fe);">
+                            <img src="https://ui-avatars.com/api/?name=Emma+Wilson&background=fff&color=00f2fe&size=100" alt="User" class="profile-avatar">
+                        </div>
+                        <div class="card-body text-center">
+                            <h3 class="card-title">Emma Wilson</h3>
+                            <p class="text-secondary">Product Manager</p>
+                            <div class="profile-stats">
+                                <div class="stat-item">
+                                    <div class="stat-value">156</div>
+                                    <div class="stat-label">Projects</div>
+                                </div>
+                                <div class="stat-item">
+                                    <div class="stat-value">2.3k</div>
+                                    <div class="stat-label">Followers</div>
+                                </div>
+                                <div class="stat-item">
+                                    <div class="stat-value">612</div>
+                                    <div class="stat-label">Following</div>
+                                </div>
+                            </div>
+                            <div class="profile-actions">
+                                <button class="btn btn-primary">Follow</button>
+                                <button class="btn btn-outline">Message</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Pricing Cards -->
+            <h2 class="section-title">Pricing Cards</h2>
+            <div class="row">
+                <div class="col-md-4">
+                    <div class="card pricing-card">
+                        <div class="card-header text-center">
+                            <h3 class="card-title">Starter</h3>
+                            <div class="pricing-amount">
+                                <span class="currency">$</span>
+                                <span class="amount">19</span>
+                                <span class="period">/month</span>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <ul class="pricing-features">
+                                <li><span class="material-icons">check_circle</span> 5 Projects</li>
+                                <li><span class="material-icons">check_circle</span> 10 GB Storage</li>
+                                <li><span class="material-icons">check_circle</span> Basic Support</li>
+                                <li><span class="material-icons">cancel</span> Advanced Analytics</li>
+                                <li><span class="material-icons">cancel</span> Custom Domain</li>
+                            </ul>
+                            <button class="btn btn-outline btn-block">Choose Plan</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card pricing-card featured">
+                        <div class="card-badge">Popular</div>
+                        <div class="card-header text-center">
+                            <h3 class="card-title">Professional</h3>
+                            <div class="pricing-amount">
+                                <span class="currency">$</span>
+                                <span class="amount">49</span>
+                                <span class="period">/month</span>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <ul class="pricing-features">
+                                <li><span class="material-icons">check_circle</span> 25 Projects</li>
+                                <li><span class="material-icons">check_circle</span> 100 GB Storage</li>
+                                <li><span class="material-icons">check_circle</span> Priority Support</li>
+                                <li><span class="material-icons">check_circle</span> Advanced Analytics</li>
+                                <li><span class="material-icons">cancel</span> Custom Domain</li>
+                            </ul>
+                            <button class="btn btn-primary btn-block">Choose Plan</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+                    <div class="card pricing-card">
+                        <div class="card-header text-center">
+                            <h3 class="card-title">Enterprise</h3>
+                            <div class="pricing-amount">
+                                <span class="currency">$</span>
+                                <span class="amount">99</span>
+                                <span class="period">/month</span>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <ul class="pricing-features">
+                                <li><span class="material-icons">check_circle</span> Unlimited Projects</li>
+                                <li><span class="material-icons">check_circle</span> Unlimited Storage</li>
+                                <li><span class="material-icons">check_circle</span> 24/7 Support</li>
+                                <li><span class="material-icons">check_circle</span> Advanced Analytics</li>
+                                <li><span class="material-icons">check_circle</span> Custom Domain</li>
+                            </ul>
+                            <button class="btn btn-outline btn-block">Choose Plan</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="../../assets/js/main.js"></script>
+    <script>
+        // Initialize admin panel
+        if (typeof AdminPanel !== 'undefined') {
+            new AdminPanel();
+        }
+    </script>
+</body>
+</html>

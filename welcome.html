@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Welcome to Prody Admin Panel</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="assets/css/style.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
     <style>
@@ -50,6 +50,76 @@
             backdrop-filter: blur(10px);
         }
         
+        .welcome-search {
+            max-width: 500px;
+            margin: 0 auto var(--spacing-2xl);
+            position: relative;
+        }
+        
+        .welcome-search-box {
+            display: flex;
+            align-items: center;
+            background-color: white;
+            border-radius: var(--radius-xl);
+            padding: var(--spacing-md) var(--spacing-lg);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            transition: all var(--transition-fast);
+        }
+        
+        .welcome-search-box:focus-within {
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
+            transform: translateY(-2px);
+        }
+        
+        .welcome-search-box .material-icons {
+            font-size: 24px;
+            color: var(--text-secondary);
+            margin-right: var(--spacing-md);
+        }
+        
+        .welcome-search-box input {
+            flex: 1;
+            border: none;
+            outline: none;
+            font-size: 16px;
+            color: var(--text-primary);
+        }
+        
+        .welcome-search-box input::placeholder {
+            color: var(--text-tertiary);
+        }
+        
+        .search-clear {
+            padding: var(--spacing-xs);
+            color: var(--text-secondary);
+            cursor: pointer;
+            border-radius: var(--radius-md);
+            display: none;
+            transition: all var(--transition-fast);
+        }
+        
+        .search-clear:hover {
+            background-color: var(--gray-200);
+            color: var(--text-primary);
+        }
+        
+        .search-clear.active {
+            display: block;
+        }
+        
+        .search-stats {
+            text-align: center;
+            color: white;
+            margin-top: var(--spacing-md);
+            font-size: 14px;
+            opacity: 0.9;
+            display: none;
+        }
+        
+        .search-stats.active {
+            display: block;
+        }
+        
         .pages-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -63,11 +133,59 @@
             box-shadow: var(--shadow-xl);
             transition: all var(--transition-normal);
             text-align: center;
+            animation: fadeIn 0.5s ease-in-out;
+        }
+        
+        .page-card.hidden {
+            display: none;
+        }
+        
+        .page-card.search-match {
+            animation: pulse 0.5s ease-in-out;
         }
         
         .page-card:hover {
             transform: translateY(-8px);
             box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: scale(0.9); }
+            to { opacity: 1; transform: scale(1); }
+        }
+        
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); }
+            50% { transform: scale(1.02); }
+        }
+        
+        .no-results {
+            grid-column: 1 / -1;
+            text-align: center;
+            padding: var(--spacing-2xl);
+            color: white;
+            display: none;
+        }
+        
+        .no-results.active {
+            display: block;
+        }
+        
+        .no-results .material-icons {
+            font-size: 72px;
+            margin-bottom: var(--spacing-lg);
+            opacity: 0.7;
+        }
+        
+        .no-results h3 {
+            font-size: 24px;
+            font-weight: 600;
+            margin-bottom: var(--spacing-sm);
+        }
+        
+        .no-results p {
+            font-size: 16px;
+            opacity: 0.9;
         }
         
         .page-card-icon {
@@ -84,7 +202,19 @@
             font-size: 36px;
             color: white;
         }
-        
+        !-- Search Box -->
+            <div class="welcome-search">
+                <div class="welcome-search-box">
+                    <span class="material-icons">search</span>
+                    <input type="text" id="pageSearch" placeholder="Search pages... (e.g., Dashboard, Analytics, Reports)" autocomplete="off">
+                    <button class="search-clear" id="clearSearch">
+                        <span class="material-icons">close</span>
+                    </button>
+                </div>
+                <div class="search-stats" id="searchStats"></div>
+            </div>
+            
+            <div class="pages-grid" id="pagesG
         .page-card h3 {
             font-size: 20px;
             font-weight: 600;
@@ -122,7 +252,7 @@
             opacity: 0.9;
         }
     </style>
-</head>
+</head> data-keywords="dashboard main overview stats charts activity metrics"
 <body>
     <div class="welcome-page">
         <div class="welcome-container">
@@ -135,19 +265,7 @@
             <div class="pages-grid">
                 <!-- Dashboard -->
                 <div class="page-card">
-                    <div class="page-card-icon" style="background: linear-gradient(135deg, #3b82f6, #2563eb);">
-                        <span class="material-icons">dashboard</span>
-                    </div>
-                    <h3>Dashboard</h3>
-                    <p>Main overview with stats, charts, and recent activity</p>
-                    <a href="dashboard.html" class="page-card-link">
-                        <span>View Page</span>
-                        <span class="material-icons" style="font-size: 18px;">arrow_forward</span>
-                    </a>
-                </div>
-                
-                <!-- Projects -->
-                <div class="page-card">
+                    <div class="page-c data-keywords="projects budget charts deals table spectrum house">
                     <div class="page-card-icon" style="background: linear-gradient(135deg, #10b981, #059669);">
                         <span class="material-icons">folder</span>
                     </div>
@@ -160,59 +278,85 @@
                 </div>
                 
                 <!-- Analytics -->
-                <div class="page-card">
+                <div class="page-card" data-keywords="analytics metrics performance traffic analysis visitors">
                     <div class="page-card-icon" style="background: linear-gradient(135deg, #8b5cf6, #7c3aed);">
                         <span class="material-icons">analytics</span>
                     </div>
                     <h3>Analytics</h3>
                     <p>Website performance metrics and traffic analysis</p>
-                    <a href="analytics.html" class="page-card-link">
+                    <a href="pages/analytics.html" class="page-card-link">
                         <span>View Page</span>
                         <span class="material-icons" style="font-size: 18px;">arrow_forward</span>
                     </a>
                 </div>
                 
                 <!-- Reports -->
-                <div class="page-card">
+                <div class="page-card" data-keywords="reports financial sales customer history business">
                     <div class="page-card-icon" style="background: linear-gradient(135deg, #f59e0b, #d97706);">
                         <span class="material-icons">description</span>
                     </div>
                     <h3>Reports</h3>
                     <p>Financial, sales, and customer reports with history</p>
-                    <a href="reports.html" class="page-card-link">
+                    <a href="pages/reports.html" class="page-card-link">
                         <span>View Page</span>
                         <span class="material-icons" style="font-size: 18px;">arrow_forward</span>
                     </a>
                 </div>
                 
                 <!-- Companies -->
-                <div class="page-card">
+                <div class="page-card" data-keywords="companies business directory filters organization clients">
                     <div class="page-card-icon" style="background: linear-gradient(135deg, #6366f1, #4f46e5);">
                         <span class="material-icons">business</span>
                     </div>
                     <h3>Companies</h3>
                     <p>Complete company directory with search and filters</p>
-                    <a href="companies.html" class="page-card-link">
+                    <a href="pages/companies.html" class="page-card-link">
                         <span>View Page</span>
                         <span class="material-icons" style="font-size: 18px;">arrow_forward</span>
                     </a>
                 </div>
                 
                 <!-- People -->
-                <div class="page-card">
+                <div class="page-card" data-keywords="people team members contacts users staff employees">
                     <div class="page-card-icon" style="background: linear-gradient(135deg, #ec4899, #db2777);">
                         <span class="material-icons">people</span>
                     </div>
                     <h3>People</h3>
                     <p>Team members directory with contact information</p>
-                    <a href="people.html" class="page-card-link">
+                    <a href="pages/people.html" class="page-card-link">
+                        <span>View Page</span>
+                        <span class="material-icons" style="font-size: 18px;">arrow_forward</span>
+                    </a>
+                </div>
+                
+                <!-- Forms -->
+                <div class="page-card" data-keywords="forms inputs elements dropdowns validation">
+                    <div class="page-card-icon" style="background: linear-gradient(135deg, #06b6d4, #0891b2);">
+                        <span class="material-icons">edit_note</span>
+                    </div>
+                    <h3>Forms</h3>
+                    <p>Form elements, dropdowns, and validation</p>
+                    <a href="pages/forms/basic-forms.html" class="page-card-link">
+                        <span>View Page</span>
+                        <span class="material-icons" style="font-size: 18px;">arrow_forward</span>
+                    </a>
+                </div>
+                
+                <!-- UI Cards -->
+                <div class="page-card" data-keywords="cards ui components widgets elements">
+                    <div class="page-card-icon" style="background: linear-gradient(135deg, #14b8a6, #0d9488);">
+                        <span class="material-icons">widgets</span>
+                    </div>
+                    <h3>UI Cards</h3>
+                    <p>Various card styles and UI components</p>
+                    <a href="pages/ui/cards.html" class="page-card-link">
                         <span>View Page</span>
                         <span class="material-icons" style="font-size: 18px;">arrow_forward</span>
                     </a>
                 </div>
                 
                 <!-- 404 Page -->
-                <div class="page-card">
+                <div class="page-card" data-keywords="404 error page not found missing">
                     <div class="page-card-icon" style="background: linear-gradient(135deg, #ef4444, #dc2626);">
                         <span class="material-icons">error_outline</span>
                     </div>
@@ -223,6 +367,25 @@
                         <span class="material-icons" style="font-size: 18px;">arrow_forward</span>
                     </a>
                 </div>
+                
+                <!-- Maintenance -->
+                <div class="page-card" data-keywords="maintenance downtime repair countdown timer service">
+                    <div class="page-card-icon" style="background: linear-gradient(135deg, #f97316, #ea580c);">
+                        <span class="material-icons">construction</span>
+                    </div>
+                    <h3>Maintenance</h3>
+                    <p>Maintenance mode page with countdown timer</p>
+                    <a href="maintenance.html" class="page-card-link">
+                        <span>View Page</span>
+                        <span class="material-icons" style="font-size: 18px;">arrow_forward</span>
+                    </a>
+                </div>
+                
+                <!-- No Results Message -->
+                <div class="no-results" id="noResults">
+                    <span class="material-icons">search_off</span>
+                    <h3>No pages found</h3>
+                    <p>Try searching with different keywords</p
                 
                 <!-- Maintenance -->
                 <div class="page-card">
@@ -237,6 +400,110 @@
                     </a>
                 </div>
             </div>
+
+    <script>
+        // Search functionality
+        const searchInput = document.getElementById('pageSearch');
+        const clearButton = document.getElementById('clearSearch');
+        const searchStats = document.getElementById('searchStats');
+        const pagesGrid = document.getElementById('pagesGrid');
+        const noResults = document.getElementById('noResults');
+        const pageCards = document.querySelectorAll('.page-card:not(.no-results)');
+        const totalPages = pageCards.length;
+
+        // Search function
+        function searchPages() {
+            const query = searchInput.value.toLowerCase().trim();
+            let visibleCount = 0;
+
+            if (query === '') {
+                // Show all cards
+                pageCards.forEach(card => {
+                    card.classList.remove('hidden', 'search-match');
+                });
+                clearButton.classList.remove('active');
+                searchStats.classList.remove('active');
+                noResults.classList.remove('active');
+                return;
+            }
+
+            // Show clear button
+            clearButton.classList.add('active');
+
+            // Filter cards
+            pageCards.forEach(card => {
+                const title = card.querySelector('h3').textContent.toLowerCase();
+                const description = card.querySelector('p').textContent.toLowerCase();
+                const keywords = card.getAttribute('data-keywords') || '';
+                
+                const searchText = `${title} ${description} ${keywords}`.toLowerCase();
+                const matches = searchText.includes(query);
+
+                if (matches) {
+                    card.classList.remove('hidden');
+                    card.classList.add('search-match');
+                    visibleCount++;
+                    
+                    // Remove animation class after animation completes
+                    setTimeout(() => {
+                        card.classList.remove('search-match');
+                    }, 500);
+                } else {
+                    card.classList.add('hidden');
+                }
+            });
+
+            // Show/hide no results message
+            if (visibleCount === 0) {
+                noResults.classList.add('active');
+                searchStats.classList.remove('active');
+            } else {
+                noResults.classList.remove('active');
+                searchStats.textContent = `Found ${visibleCount} of ${totalPages} pages`;
+                searchStats.classList.add('active');
+            }
+        }
+
+        // Clear search
+        function clearSearch() {
+            searchInput.value = '';
+            searchInput.focus();
+            searchPages();
+        }
+
+        // Event listeners
+        searchInput.addEventListener('input', searchPages);
+        clearButton.addEventListener('click', clearSearch);
+
+        // Keyboard shortcuts
+        searchInput.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                clearSearch();
+            }
+        });
+
+        // Auto-focus search on key press
+        document.addEventListener('keydown', (e) => {
+            // Focus search when typing (except on input elements)
+            if (e.target.tagName !== 'INPUT' && e.key.length === 1 && !e.ctrlKey && !e.metaKey) {
+                searchInput.focus();
+            }
+            
+            // Clear search with Ctrl/Cmd + K
+            if ((e.ctrlKey || e.metaKey) && e.key === 'k') {
+                e.preventDefault();
+                searchInput.focus();
+                searchInput.select();
+            }
+        });
+
+        // Animation on page load
+        document.addEventListener('DOMContentLoaded', () => {
+            pageCards.forEach((card, index) => {
+                card.style.animationDelay = `${index * 0.05}s`;
+            });
+        });
+    </script>
             
             <div class="footer-info">
                 <p>✨ Complete admin panel with working features, animations, and responsive design</p>

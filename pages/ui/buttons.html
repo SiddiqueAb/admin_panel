@@ -1,0 +1,160 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cards | Prody Admin Panel</title>
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <div class="sidebar-header">
+            <div class="logo">
+                <span class="material-icons logo-icon">dashboard</span>
+                <span class="logo-text">Prody</span>
+            </div>
+            <button class="sidebar-toggle">
+                <span class="material-icons">menu</span>
+            </button>
+        </div>
+
+        <div class="search-box">
+            <span class="material-icons">search</span>
+            <input type="text" placeholder="Search..." />
+            <span class="shortcut">âŒ˜F</span>
+        </div>
+
+        <nav class="sidebar-nav">
+            <a href="../../dashboard.html" class="nav-item">
+                <span class="material-icons">dashboard</span>
+                <span>Dashboard</span>
+            </a>
+            
+            <a href="../../index.html" class="nav-item has-submenu">
+                <span class="material-icons">folder</span>
+                <span>Projects</span>
+                <span class="badge">3</span>
+                <div class="submenu">
+                    <a href="../../index.html" class="submenu-item">
+                        <span class="material-icons">list</span>
+                        <span>All Projects</span>
+                    </a>
+                    <a href="#" class="submenu-item">
+                        <span class="material-icons">add_circle</span>
+                        <span>New Project</span>
+                    </a>
+                </div>
+            </a>
+            
+            <a href="#" class="nav-item has-submenu">
+                <span class="material-icons">edit_note</span>
+                <span>Forms</span>
+                <div class="submenu">
+                    <a href="../forms/basic-forms.html" class="submenu-item">
+                        <span class="material-icons">description</span>
+                        <span>Basic Forms</span>
+                    </a>
+                    <a href="../forms/advanced-forms.html" class="submenu-item">
+                        <span class="material-icons">tune</span>
+                        <span>Advanced Forms</span>
+                    </a>
+                </div>
+            </a>
+            
+            <a href="#" class="nav-item has-submenu">
+                <span class="material-icons">table_chart</span>
+                <span>Tables</span>
+                <div class="submenu">
+                    <a href="../tables/simple-tables.html" class="submenu-item">
+                        <span class="material-icons">grid_on</span>
+                        <span>Simple Tables</span>
+                    </a>
+                    <a href="../tables/data-tables.html" class="submenu-item">
+                        <span class="material-icons">table_view</span>
+                        <span>Data Tables</span>
+                    </a>
+                </div>
+            </a>
+            
+            <a href="#" class="nav-item has-submenu active">
+                <span class="material-icons">widgets</span>
+                <span>UI Elements</span>
+                <div class="submenu">
+                    <a href="cards.html" class="submenu-item active">
+                        <span class="material-icons">dashboard</span>
+                        <span>Cards</span>
+                    </a>
+                    <a href="buttons.html" class="submenu-item">
+                        <span class="material-icons">smart_button</span>
+                        <span>Buttons</span>
+                    </a>
+                    <a href="modals.html" class="submenu-item">
+                        <span class="material-icons">web_asset</span>
+                        <span>Modals</span>
+                    </a>
+                </div>
+            </a>
+            
+            <a href="#" class="nav-item has-submenu">
+                <span class="material-icons">show_chart</span>
+                <span>Charts</span>
+                <div class="submenu">
+                    <a href="../charts/chartjs.html" class="submenu-item">
+                        <span class="material-icons">insert_chart</span>
+                        <span>Chart.js</span>
+                    </a>
+                    <a href="../analytics.html" class="submenu-item">
+                        <span class="material-icons">analytics</span>
+                        <span>Analytics</span>
+                    </a>
+                </div>
+            </a>
+            
+            <a href="../reports.html" class="nav-item has-submenu">
+                <span class="material-icons">description</span>
+                <span>Reports</span>
+                <div class="submenu">
+                    <a href="../reports.html#financial" class="submenu-item">
+                        <span class="material-icons">account_balance</span>
+                        <span>Financial</span>
+                    </a>
+                    <a href="../reports.html#sales" class="submenu-item">
+                        <span class="material-icons">trending_up</span>
+                        <span>Sales</span>
+                    </a>
+                </div>
+            </a>
+            
+            <a href="../companies.html" class="nav-item">
+                <span class="material-icons">business</span>
+                <span>Companies</span>
+                <span class="badge">17</span>
+            </a>
+            <a href="../people.html" class="nav-item">
+                <span class="material-icons">people</span>
+                <span>People</span>
+                <span class="badge">164</span>
+            </a>
+        </nav>
+
+        <div class="sidebar-footer">
+            <a href="#" class="footer-item">
+                <span class="material-icons">help_outline</span>
+                <span>Help center</span>
+            </a>
+            <a href="#" class="footer-item">
+                <span class="material-icons">settings</span>
+                <span>Settings</span>
+            </a>
+        </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-left">
+                <h1>Cards</h1>

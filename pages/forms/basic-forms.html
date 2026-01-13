@@ -1,0 +1,502 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic Forms | Prody Admin Panel</title>
+    <link rel="stylesheet" href="../../assets/css/style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <div class="sidebar-header">
+            <div class="logo">
+                <span class="material-icons logo-icon">dashboard</span>
+                <span class="logo-text">Prody</span>
+            </div>
+            <button class="sidebar-toggle">
+                <span class="material-icons">menu</span>
+            </button>
+        </div>
+
+        <div class="search-box">
+            <span class="material-icons">search</span>
+            <input type="text" placeholder="Search..." />
+            <span class="shortcut">⌘F</span>
+        </div>
+
+        <nav class="sidebar-nav">
+            <a href="../../dashboard.html" class="nav-item">
+                <span class="material-icons">dashboard</span>
+                <span>Dashboard</span>
+            </a>
+            
+            <a href="../../index.html" class="nav-item has-submenu">
+                <span class="material-icons">folder</span>
+                <span>Projects</span>
+                <span class="badge">3</span>
+                <div class="submenu">
+                    <a href="../../index.html" class="submenu-item">
+                        <span class="material-icons">list</span>
+                        <span>All Projects</span>
+                    </a>
+                    <a href="#" class="submenu-item">
+                        <span class="material-icons">add_circle</span>
+                        <span>New Project</span>
+                    </a>
+                </div>
+            </a>
+            
+            <a href="#" class="nav-item has-submenu active">
+                <span class="material-icons">edit_note</span>
+                <span>Forms</span>
+                <div class="submenu">
+                    <a href="basic-forms.html" class="submenu-item active">
+                        <span class="material-icons">description</span>
+                        <span>Basic Forms</span>
+                    </a>
+                    <a href="advanced-forms.html" class="submenu-item">
+                        <span class="material-icons">tune</span>
+                        <span>Advanced Forms</span>
+                    </a>
+                    <a href="#" class="submenu-item">
+                        <span class="material-icons">check_circle</span>
+                        <span>Form Validation</span>
+                    </a>
+                </div>
+            </a>
+            
+            <a href="#" class="nav-item has-submenu">
+                <span class="material-icons">table_chart</span>
+                <span>Tables</span>
+                <div class="submenu">
+                    <a href="../tables/simple-tables.html" class="submenu-item">
+                        <span class="material-icons">grid_on</span>
+                        <span>Simple Tables</span>
+                    </a>
+                    <a href="../tables/data-tables.html" class="submenu-item">
+                        <span class="material-icons">table_view</span>
+                        <span>Data Tables</span>
+                    </a>
+                </div>
+            </a>
+            
+            <a href="#" class="nav-item has-submenu">
+                <span class="material-icons">widgets</span>
+                <span>UI Elements</span>
+                <div class="submenu">
+                    <a href="../ui/cards.html" class="submenu-item">
+                        <span class="material-icons">dashboard</span>
+                        <span>Cards</span>
+                    </a>
+                    <a href="../ui/buttons.html" class="submenu-item">
+                        <span class="material-icons">smart_button</span>
+                        <span>Buttons</span>
+                    </a>
+                    <a href="../ui/modals.html" class="submenu-item">
+                        <span class="material-icons">web_asset</span>
+                        <span>Modals</span>
+                    </a>
+                </div>
+            </a>
+            
+            <a href="#" class="nav-item has-submenu">
+                <span class="material-icons">show_chart</span>
+                <span>Charts</span>
+                <div class="submenu">
+                    <a href="../charts/chartjs.html" class="submenu-item">
+                        <span class="material-icons">insert_chart</span>
+                        <span>Chart.js</span>
+                    </a>
+                    <a href="../analytics.html" class="submenu-item">
+                        <span class="material-icons">analytics</span>
+                        <span>Analytics</span>
+                    </a>
+                </div>
+            </a>
+            
+            <a href="../reports.html" class="nav-item has-submenu">
+                <span class="material-icons">description</span>
+                <span>Reports</span>
+                <div class="submenu">
+                    <a href="../reports.html#financial" class="submenu-item">
+                        <span class="material-icons">account_balance</span>
+                        <span>Financial</span>
+                    </a>
+                    <a href="../reports.html#sales" class="submenu-item">
+                        <span class="material-icons">trending_up</span>
+                        <span>Sales</span>
+                    </a>
+                </div>
+            </a>
+            
+            <a href="../companies.html" class="nav-item">
+                <span class="material-icons">business</span>
+                <span>Companies</span>
+                <span class="badge">17</span>
+            </a>
+            <a href="../people.html" class="nav-item">
+                <span class="material-icons">people</span>
+                <span>People</span>
+                <span class="badge">164</span>
+            </a>
+        </nav>
+
+        <div class="sidebar-footer">
+            <a href="#" class="footer-item">
+                <span class="material-icons">help_outline</span>
+                <span>Help center</span>
+            </a>
+            <a href="#" class="footer-item">
+                <span class="material-icons">settings</span>
+                <span>Settings</span>
+            </a>
+        </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Header -->
+        <header class="header">
+            <div class="header-left">
+                <h1>Basic Forms</h1>
+                <p class="header-subtitle">Form elements and input types</p>
+            </div>
+            <div class="header-right">
+                <button class="btn-icon">
+                    <span class="material-icons">notifications</span>
+                    <span class="badge-dot"></span>
+                </button>
+                <div class="user-menu">
+                    <img src="https://ui-avatars.com/api/?name=John+Doe&background=3b82f6&color=fff" alt="User" class="user-avatar">
+                    <div>
+                        <div class="user-name">John Doe</div>
+                        <div class="user-role">Administrator</div>
+                    </div>
+                </div>
+            </div>
+        </header>
+
+        <!-- Content -->
+        <div class="content">
+            <div class="row">
+                <!-- Basic Input Fields -->
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-header">
+                            <h3 class="card-title">Basic Input Fields</h3>
+                        </div>
+                        <div class="card-body">
+                            <form>
+                                <div class="form-group">
+                                    <label for="text-input">Text Input</label>
+                                    <input type="text" id="text-input" class="form-control" placeholder="Enter text">
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="email-input">Email</label>
+                                    <input type="email" id="email-input" class="form-control" placeholder="email@example.com">
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="password-input">Password</label>
+                                    <input type="password" id="password-input" class="form-control" placeholder="Enter password">
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="number-input">Number</label>
+                                    <input type="number" id="number-input" class="form-control" placeholder="Enter number">
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="tel-input">Telephone</label>
+                                    <input type="tel" id="tel-input" class="form-control" placeholder="+1 (555) 000-0000">
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="url-input">URL</label>
+                                    <input type="url" id="url-input" class="form-control" placeholder="https://example.com">
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="date-input">Date</label>
+                                    <input type="date" id="date-input" class="form-control">
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="time-input">Time</label>
+                                    <input type="time" id="time-input" class="form-control">
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Select Dropdowns -->
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-header">
+                            <h3 class="card-title">Select Dropdowns</h3>
+                        </div>
+                        <div class="card-body">
+                            <form>
+                                <div class="form-group">
+                                    <label for="select-single">Single Select</label>
+                                    <select id="select-single" class="form-control">
+                                        <option value="">Choose an option...</option>
+                                        <option value="1">Option 1</option>
+                                        <option value="2">Option 2</option>
+                                        <option value="3">Option 3</option>
+                                        <option value="4">Option 4</option>
+                                    </select>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="select-country">Country</label>
+                                    <select id="select-country" class="form-control">
+                                        <option value="">Select country...</option>
+                                        <option value="us">United States</option>
+                                        <option value="uk">United Kingdom</option>
+                                        <option value="ca">Canada</option>
+                                        <option value="au">Australia</option>
+                                        <option value="de">Germany</option>
+                                        <option value="fr">France</option>
+                                        <option value="jp">Japan</option>
+                                        <option value="cn">China</option>
+                                    </select>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="select-multiple">Multiple Select</label>
+                                    <select id="select-multiple" class="form-control" multiple>
+                                        <option value="html">HTML</option>
+                                        <option value="css">CSS</option>
+                                        <option value="js">JavaScript</option>
+                                        <option value="php">PHP</option>
+                                        <option value="python">Python</option>
+                                        <option value="ruby">Ruby</option>
+                                    </select>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="select-size">Size Variants</label>
+                                    <select id="select-size" class="form-control form-control-sm">
+                                        <option>Small select</option>
+                                        <option>Option 1</option>
+                                        <option>Option 2</option>
+                                    </select>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="select-disabled">Disabled Select</label>
+                                    <select id="select-disabled" class="form-control" disabled>
+                                        <option>This select is disabled</option>
+                                    </select>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <!-- Checkboxes and Radio Buttons -->
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-header">
+                            <h3 class="card-title">Checkboxes & Radio Buttons</h3>
+                        </div>
+                        <div class="card-body">
+                            <form>
+                                <div class="form-group">
+                                    <label>Checkboxes</label>
+                                    <div class="form-check">
+                                        <input type="checkbox" id="check1" class="form-check-input" checked>
+                                        <label for="check1" class="form-check-label">Default checkbox</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input type="checkbox" id="check2" class="form-check-input">
+                                        <label for="check2" class="form-check-label">Unchecked</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input type="checkbox" id="check3" class="form-check-input" disabled>
+                                        <label for="check3" class="form-check-label">Disabled checkbox</label>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Radio Buttons</label>
+                                    <div class="form-check">
+                                        <input type="radio" id="radio1" name="radio-group" class="form-check-input" checked>
+                                        <label for="radio1" class="form-check-label">Selected option</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input type="radio" id="radio2" name="radio-group" class="form-check-input">
+                                        <label for="radio2" class="form-check-label">Second option</label>
+                                    </div>
+                                    <div class="form-check">
+                                        <input type="radio" id="radio3" name="radio-group" class="form-check-input" disabled>
+                                        <label for="radio3" class="form-check-label">Disabled option</label>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Toggle Switches</label>
+                                    <div class="form-check form-switch">
+                                        <input type="checkbox" id="switch1" class="form-check-input" checked>
+                                        <label for="switch1" class="form-check-label">Enable notifications</label>
+                                    </div>
+                                    <div class="form-check form-switch">
+                                        <input type="checkbox" id="switch2" class="form-check-input">
+                                        <label for="switch2" class="form-check-label">Auto-save enabled</label>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Textarea and File Upload -->
+                <div class="col-md-6">
+                    <div class="card">
+                        <div class="card-header">
+                            <h3 class="card-title">Textarea & File Upload</h3>
+                        </div>
+                        <div class="card-body">
+                            <form>
+                                <div class="form-group">
+                                    <label for="textarea">Textarea</label>
+                                    <textarea id="textarea" class="form-control" rows="4" placeholder="Enter your message..."></textarea>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="file-input">File Upload</label>
+                                    <input type="file" id="file-input" class="form-control">
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="file-multiple">Multiple Files</label>
+                                    <input type="file" id="file-multiple" class="form-control" multiple>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="color-input">Color Picker</label>
+                                    <input type="color" id="color-input" class="form-control" value="#3b82f6">
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="range-input">Range Slider</label>
+                                    <input type="range" id="range-input" class="form-range" min="0" max="100" value="50">
+                                    <div class="range-value" style="margin-top: 8px; color: #6b7280;">Value: <span id="range-output">50</span></div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Form Actions -->
+            <div class="row">
+                <div class="col-12">
+                    <div class="card">
+                        <div class="card-header">
+                            <h3 class="card-title">Complete Form Example</h3>
+                        </div>
+                        <div class="card-body">
+                            <form id="contact-form">
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="first-name">First Name *</label>
+                                            <input type="text" id="first-name" class="form-control" required>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="last-name">Last Name *</label>
+                                            <input type="text" id="last-name" class="form-control" required>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="row">
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="user-email">Email Address *</label>
+                                            <input type="email" id="user-email" class="form-control" required>
+                                        </div>
+                                    </div>
+                                    <div class="col-md-6">
+                                        <div class="form-group">
+                                            <label for="phone">Phone Number</label>
+                                            <input type="tel" id="phone" class="form-control">
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="department">Department</label>
+                                    <select id="department" class="form-control">
+                                        <option value="">Select department...</option>
+                                        <option value="sales">Sales</option>
+                                        <option value="support">Support</option>
+                                        <option value="billing">Billing</option>
+                                        <option value="technical">Technical</option>
+                                    </select>
+                                </div>
+
+                                <div class="form-group">
+                                    <label for="message-text">Message *</label>
+                                    <textarea id="message-text" class="form-control" rows="5" required></textarea>
+                                </div>
+
+                                <div class="form-group">
+                                    <div class="form-check">
+                                        <input type="checkbox" id="agree" class="form-check-input" required>
+                                        <label for="agree" class="form-check-label">I agree to the terms and conditions *</label>
+                                    </div>
+                                </div>
+
+                                <div class="form-actions">
+                                    <button type="submit" class="btn btn-primary">Submit Form</button>
+                                    <button type="reset" class="btn btn-secondary">Reset</button>
+                                    <button type="button" class="btn btn-outline">Cancel</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="../../assets/js/main.js"></script>
+    <script>
+        // Range slider value display
+        const rangeInput = document.getElementById('range-input');
+        const rangeOutput = document.getElementById('range-output');
+        
+        if (rangeInput && rangeOutput) {
+            rangeInput.addEventListener('input', function() {
+                rangeOutput.textContent = this.value;
+            });
+        }
+
+        // Form submission
+        const contactForm = document.getElementById('contact-form');
+        if (contactForm) {
+            contactForm.addEventListener('submit', function(e) {
+                e.preventDefault();
+                alert('Form submitted successfully!');
+            });
+        }
+
+        // Initialize admin panel
+        if (typeof AdminPanel !== 'undefined') {
+            new AdminPanel();
+        }
+    </script>
+</body>
+</html>

@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Dashboard | Prody Admin Panel</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="assets/css/style.css">
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
@@ -32,58 +32,108 @@
                 <span class="material-icons">dashboard</span>
                 <span>Dashboard</span>
             </a>
+            
             <a href="index.html" class="nav-item has-submenu">
                 <span class="material-icons">folder</span>
                 <span>Projects</span>
-                <span class="badge">3/5</span>
+                <span class="badge">3</span>
                 <div class="submenu">
                     <a href="index.html" class="submenu-item">
-                        <span class="material-icons">home</span>
-                        <span>House Spectrum Ltd</span>
+                        <span class="material-icons">list</span>
+                        <span>All Projects</span>
                     </a>
                     <a href="#" class="submenu-item">
-                        <span class="material-icons">apartment</span>
-                        <span>Urban Tower</span>
-                    </a>
-                    <a href="#" class="submenu-item">
-                        <span class="material-icons">villa</span>
-                        <span>Green Valley</span>
+                        <span class="material-icons">add_circle</span>
+                        <span>New Project</span>
                     </a>
                 </div>
             </a>
-            <a href="analytics.html" class="nav-item">
-                <span class="material-icons">analytics</span>
-                <span>Analytics</span>
+            
+            <a href="#" class="nav-item has-submenu">
+                <span class="material-icons">edit_note</span>
+                <span>Forms</span>
+                <div class="submenu">
+                    <a href="pages/forms/basic-forms.html" class="submenu-item">
+                        <span class="material-icons">description</span>
+                        <span>Basic Forms</span>
+                    </a>
+                    <a href="pages/forms/advanced-forms.html" class="submenu-item">
+                        <span class="material-icons">tune</span>
+                        <span>Advanced Forms</span>
+                    </a>
+                </div>
             </a>
-            <a href="reports.html" class="nav-item has-submenu">
+            
+            <a href="#" class="nav-item has-submenu">
+                <span class="material-icons">table_chart</span>
+                <span>Tables</span>
+                <div class="submenu">
+                    <a href="pages/tables/simple-tables.html" class="submenu-item">
+                        <span class="material-icons">grid_on</span>
+                        <span>Simple Tables</span>
+                    </a>
+                    <a href="pages/tables/data-tables.html" class="submenu-item">
+                        <span class="material-icons">table_view</span>
+                        <span>Data Tables</span>
+                    </a>
+                </div>
+            </a>
+            
+            <a href="#" class="nav-item has-submenu">
+                <span class="material-icons">widgets</span>
+                <span>UI Elements</span>
+                <div class="submenu">
+                    <a href="pages/ui/cards.html" class="submenu-item">
+                        <span class="material-icons">dashboard</span>
+                        <span>Cards</span>
+                    </a>
+                    <a href="pages/ui/buttons.html" class="submenu-item">
+                        <span class="material-icons">smart_button</span>
+                        <span>Buttons</span>
+                    </a>
+                    <a href="pages/ui/modals.html" class="submenu-item">
+                        <span class="material-icons">web_asset</span>
+                        <span>Modals</span>
+                    </a>
+                </div>
+            </a>
+            
+            <a href="#" class="nav-item has-submenu">
+                <span class="material-icons">show_chart</span>
+                <span>Charts</span>
+                <div class="submenu">
+                    <a href="pages/charts/chartjs.html" class="submenu-item">
+                        <span class="material-icons">insert_chart</span>
+                        <span>Chart.js</span>
+                    </a>
+                    <a href="pages/analytics.html" class="submenu-item">
+                        <span class="material-icons">analytics</span>
+                        <span>Analytics</span>
+                    </a>
+                </div>
+            </a>
+            
+            <a href="pages/reports.html" class="nav-item has-submenu">
                 <span class="material-icons">description</span>
                 <span>Reports</span>
-                <span class="badge badge-new">New</span>
                 <div class="submenu">
-                    <a href="reports.html#financial" class="submenu-item">
+                    <a href="pages/reports.html#financial" class="submenu-item">
                         <span class="material-icons">account_balance</span>
                         <span>Financial</span>
                     </a>
-                    <a href="reports.html#sales" class="submenu-item">
+                    <a href="pages/reports.html#sales" class="submenu-item">
                         <span class="material-icons">trending_up</span>
                         <span>Sales</span>
                     </a>
-                    <a href="reports.html#customer" class="submenu-item">
-                        <span class="material-icons">groups</span>
-                        <span>Customer</span>
-                    </a>
                 </div>
             </a>
-            <a href="#" class="nav-item">
-                <span class="material-icons">extension</span>
-                <span>Extensions</span>
-            </a>
-            <a href="companies.html" class="nav-item">
+            
+            <a href="pages/companies.html" class="nav-item">
                 <span class="material-icons">business</span>
                 <span>Companies</span>
                 <span class="badge">17</span>
             </a>
-            <a href="people.html" class="nav-item">
+            <a href="pages/people.html" class="nav-item">
                 <span class="material-icons">people</span>
                 <span>People</span>
                 <span class="badge">164</span>
@@ -96,13 +146,8 @@
                 <span>Help center</span>
             </a>
             <a href="#" class="footer-item">
-                <span class="material-icons">notifications</span>
-                <span>Notifications</span>
-                <span class="badge badge-alert">2</span>
-            </a>
-            <a href="#" class="footer-item">
-                <span class="material-icons">account_circle</span>
-                <span>Ember Crest</span>
+                <span class="material-icons">settings</span>
+                <span>Settings</span>
             </a>
             <div class="starter-overview">
                 <p class="overview-title">Starter set overview</p>
@@ -375,7 +420,7 @@
 
     <!-- Scripts -->
     <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
-    <script src="js/main.js"></script>
-    <script src="js/charts.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/charts.js"></script>
 </body>
 </html>

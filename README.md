@@ -1,282 +1,172 @@
-# Prody Admin Panel
+# Prody Admin Panel - Professional Structure
 
-A complete, modern, and responsive static admin panel built with HTML, CSS, and vanilla JavaScript. Perfect for managing projects, analytics, companies, and teams.
-
-## 📁 File Structure
+## Folder Structure (AdminLTE Style)
 
 ```
 admin_panel/
-├── index.html              # Project detail page (House Spectrum Ltd)
-├── dashboard.html          # Main dashboard
-├── analytics.html          # Analytics page
-├── reports.html            # Reports page (coming soon)
-├── companies.html          # Companies directory
-├── people.html             # Team members page
-├── 404.html               # 404 error page
-├── maintenance.html       # Maintenance mode page
-├── style.css              # Main stylesheet (reusable across project)
-├── js/
-│   ├── main.js           # Main JavaScript functionality
-│   └── charts.js         # Chart configurations
-└── README.md             # This file
+├── assets/
+│   ├── css/
+│   │   └── style.css          # Main stylesheet
+│   └── js/
+│       ├── main.js             # Core JavaScript
+│       └── charts.js           # Chart.js utilities
+│
+├── pages/
+│   ├── forms/
+│   │   ├── basic-forms.html    # Form elements & dropdowns
+│   │   └── advanced-forms.html # Advanced form components
+│   ├── tables/
+│   │   ├── simple-tables.html  # Basic tables
+│   │   └── data-tables.html    # Data tables with features
+│   ├── ui/
+│   │   ├── cards.html          # Card variations
+│   │   ├── buttons.html        # Button styles
+│   │   └── modals.html         # Modal components
+│   ├── charts/
+│   │   └── chartjs.html        # Chart.js examples
+│   ├── analytics.html          # Analytics dashboard
+│   ├── reports.html            # Reports page
+│   ├── companies.html          # Company directory
+│   └── people.html             # Team members
+│
+├── docs/
+│   ├── README.md               # Documentation
+│   └── INTEGRATION_GUIDE.md    # Framework integration
+│
+├── index.html                  # Project detail page
+├── dashboard.html              # Main dashboard
+├── welcome.html                # Welcome/landing page
+├── 404.html                    # Error page
+└── maintenance.html            # Maintenance page
 ```
 
-## ✨ Features
+## Quick Start
 
-### 🎨 **Design & UI**
-- **Pixel-perfect design** matching the reference
-- **Fully responsive** - Works on desktop, tablet, and mobile
-- **Smooth animations** - Fade-ins, slides, and transitions
-- **Modern card-based layout**
-- **Professional color scheme** with CSS variables
+1. Open `welcome.html` for an overview of all pages
+2. Navigate to `dashboard.html` for the main admin interface
+3. Explore different sections through the sidebar navigation
 
-### 🔍 **Search Functionality**
-- **Smart search** with suggestions
-- **Keyboard navigation** (Arrow keys, Enter)
-- **Categorized results**
-- **Highlighted matches**
+## Features
 
-### 🗂️ **Navigation**
-- **Collapsible submenus**
-- **Active page highlighting**
-- **Mobile-friendly sidebar**
-- **Breadcrumb navigation**
+### Forms (`pages/forms/`)
+- ✅ Text, email, password, number inputs
+- ✅ Working dropdown selects (single & multiple)
+- ✅ Checkboxes and radio buttons
+- ✅ Toggle switches
+- ✅ File upload
+- ✅ Color picker
+- ✅ Range sliders
+- ✅ Form validation
 
-### 📊 **Charts**
-- **Interactive charts** using Chart.js
-- **Budget tracking** (line chart)
-- **Sales overview** (line chart)
-- **Traffic sources** (doughnut chart)
-- **Weekly visitors** (bar chart)
-- **Analytics tracking** (multi-line chart)
+### UI Elements (`pages/ui/`)
+- ✅ Card variations (basic, stats, profile, pricing)
+- ✅ Button styles
+- ✅ Modal dialogs
+- ✅ Responsive layouts
 
-### 📋 **Tables**
-- **Sortable columns**
-- **Row selection** with checkboxes
-- **Pagination**
-- **Search/filter**
-- **Export functionality**
+### Tables (`pages/tables/`)
+- ✅ Sortable tables
+- ✅ Filterable data
+- ✅ Pagination
+- ✅ Row selection
 
-### 🎯 **Dropdowns & Modals**
-- **Fully functional dropdowns**
-- **Modal dialogs**
-- **Click-outside to close**
-- **ESC key support**
+### Charts (`pages/charts/`)
+- ✅ Line charts
+- ✅ Bar charts
+- ✅ Doughnut charts
+- ✅ Responsive charts
 
-### 🔔 **Notifications**
-- **Toast notifications**
-- **Auto-dismiss**
-- **Multiple types** (success, error, warning, info)
+## Navigation Structure
 
-### 🎭 **Animations**
-- **Scroll animations** (fade-in-up)
-- **Number counters**
-- **Hover effects**
-- **Smooth transitions**
+The sidebar includes organized menu items with submenus:
 
-## 🚀 Getting Started
+- **Dashboard** - Main overview
+- **Projects** - Project management
+  - All Projects
+  - New Project
+- **Forms** - Form elements
+  - Basic Forms
+  - Advanced Forms
+  - Form Validation
+- **Tables** - Data tables
+  - Simple Tables
+  - Data Tables
+- **UI Elements** - Components
+  - Cards
+  - Buttons
+  - Modals
+- **Charts** - Data visualization
+  - Chart.js
+  - Analytics
+- **Reports** - Business reports
+  - Financial
+  - Sales
+- **Companies** - Company directory
+- **People** - Team members
 
-### Quick Start
-1. **No installation required!** Just open any HTML file in your browser
-2. **Start with** `dashboard.html` for the main dashboard
-3. **Or open** `index.html` for the project detail page
+## File Path Updates
 
-### For Development
-1. Open the folder in VS Code or your favorite editor
-2. Use Live Server extension for auto-reload
-3. Modify `style.css` for styling changes
-4. Edit JavaScript files in `/js` folder
+All files now use relative paths based on their location:
 
-## 📖 Usage Guide
-
-### Navigation
-- **Sidebar menu** - Click items to navigate
-- **Submenus** - Click parent items with arrow to expand
-- **Mobile** - Click hamburger icon to toggle sidebar
-- **Search** - Type in search box for suggestions
-
-### Customization
-
-#### Colors
-Edit CSS variables in `style.css`:
-```css
-:root {
-    --primary-color: #3b82f6;
-    --accent-red: #ef4444;
-    --accent-green: #10b981;
-    /* ... more colors */
-}
-```
-
-#### Fonts
-Change font family:
-```css
-body {
-    font-family: 'Inter', sans-serif;
-}
-```
-
-#### Layout
-Adjust sidebar width:
-```css
-:root {
-    --sidebar-width: 240px;
-}
-```
-
-### Adding New Pages
-1. Copy any existing page as template
-2. Update the `<title>` tag
-3. Update active class in sidebar navigation
-4. Customize the content area
-5. Include scripts at the bottom
-
-### Charts
-Charts use Chart.js. Modify configurations in `js/charts.js`:
-```javascript
-createBudgetChart(canvas) {
-    return new Chart(ctx, {
-        type: 'line',
-        data: { /* your data */ },
-        options: { /* your options */ }
-    });
-}
-```
-
-## 📄 Page Descriptions
-
-### Dashboard (`dashboard.html`)
-- **Stats cards** - Revenue, Orders, Customers, Projects
-- **Sales chart** - Year-over-year sales
-- **Traffic sources** - Pie chart breakdown
-- **Recent activity** - Latest actions
-- **Top products** - Best sellers
-
-### Projects (`index.html`)
-- **Project header** - Name, status, stats
-- **Budget chart** - Revenue vs Expenditures
-- **Deals table** - All project deals
-- **Interactive controls** - Filter, sort, export
-
-### Analytics (`analytics.html`)
-- **Key metrics** - Page views, visitors, bounce rate
-- **Traffic analysis** - 30-day trend chart
-- **Device breakdown** - Desktop vs mobile
-- **Top pages** - Most visited pages
-
-### Companies (`companies.html`)
-- **Company directory** - All business partners
-- **Detailed info** - Industry, location, employees
-- **Status tracking** - Active, pending, inactive
-- **Search & filter** - Find companies quickly
-
-### People (`people.html`)
-- **Team grid** - Card-based layout
-- **Contact info** - Email and phone
-- **Online status** - Real-time indicators
-- **Quick actions** - Email, call, more options
-
-### 404 Page (`404.html`)
-- **Error display** - Large 404 code
-- **Helpful message** - User-friendly text
-- **Navigation buttons** - Go back or home
-
-### Maintenance (`maintenance.html`)
-- **Countdown timer** - Time remaining
-- **Professional message** - Inform users
-- **Branded design** - Consistent styling
-
-## 🎨 CSS Architecture
-
-### Organization
-The CSS is organized into logical sections:
-1. **Global Styles** - Reset, variables, base styles
-2. **Sidebar** - Navigation and menu
-3. **Main Content** - Page layouts
-4. **Components** - Reusable elements
-5. **Utilities** - Helper classes
-6. **Responsive** - Media queries
-
-### CSS Variables
-All colors, spacing, and design tokens are defined as CSS variables for easy customization.
-
-### Utility Classes
-Use utility classes for quick styling:
+### Root Level Files (dashboard.html, index.html, etc.)
 ```html
-<div class="flex items-center gap-3 p-4 rounded-lg shadow-md">
-    <!-- Content -->
-</div>
+<link rel="stylesheet" href="assets/css/style.css">
+<script src="assets/js/main.js"></script>
 ```
 
-## 🔧 JavaScript Features
+### Pages in `/pages/` (analytics.html, reports.html, etc.)
+```html
+<link rel="stylesheet" href="../assets/css/style.css">
+<script src="../assets/js/main.js"></script>
+```
 
-### Main.js
-- **AdminPanel class** - Core functionality
-- **Sidebar management** - Toggle, active states
-- **Search system** - Suggestions, keyboard nav
-- **Dropdowns** - Dynamic positioning
-- **Modals** - Show/hide logic
-- **Animations** - Scroll observers
-- **Notifications** - Toast system
+### Pages in Subfolders (`/pages/forms/`, `/pages/ui/`, etc.)
+```html
+<link rel="stylesheet" href="../../assets/css/style.css">
+<script src="../../assets/js/main.js"></script>
+```
 
-### Charts.js
-- **ChartManager class** - All charts
-- **Multiple chart types** - Line, bar, doughnut
-- **Responsive** - Auto-resize
-- **Customizable** - Easy to modify
+## Professional Features
 
-### TableManager
-- **Sorting** - Click headers to sort
-- **Filtering** - Search within tables
-- **Selection** - Select all/individual
-- **Pagination** - Navigate pages
+### Working Dropdowns
+All select elements are styled and functional with:
+- Single selection
+- Multiple selection
+- Disabled states
+- Size variants
 
-## 🌐 Browser Support
-- ✅ Chrome (latest)
-- ✅ Firefox (latest)
-- ✅ Safari (latest)
-- ✅ Edge (latest)
+### Search Functionality
+- Real-time menu filtering
+- Keyword-based page search
+- Auto-complete suggestions
 
-## 📱 Responsive Breakpoints
-- **Desktop**: 1200px+
-- **Tablet**: 768px - 1199px
-- **Mobile**: < 768px
+### Responsive Design
+- Mobile-first approach
+- Breakpoints: 768px, 1200px
+- Touch-friendly interface
 
-## 🎯 Best Practices
-- **Semantic HTML** - Proper element usage
-- **Accessible** - ARIA labels where needed
-- **Performance** - Optimized animations
-- **Clean code** - Well-commented and organized
-- **Reusable** - Component-based approach
+### Animations
+- Smooth transitions
+- Hover effects
+- Loading states
+- Number counters
 
-## 🔄 Updates & Maintenance
-To add new features:
-1. **Pages** - Create new HTML using existing templates
-2. **Styles** - Add to appropriate section in style.css
-3. **Scripts** - Add functions to main.js or create new files
-4. **Charts** - Add chart methods to charts.js
+## Browser Support
 
-## 💡 Tips
-- **Customize colors** - Edit CSS variables for instant theme changes
-- **Add pages** - Copy existing pages and modify
-- **Extend functionality** - Add to AdminPanel class
-- **Create components** - Use utility classes for consistency
+- Chrome (latest)
+- Firefox (latest)
+- Safari (latest)
+- Edge (latest)
 
-## 🤝 Contributing
-Feel free to customize this admin panel for your projects! Suggestions for improvements are welcome.
+## License
 
-## 📝 License
-Free to use for personal and commercial projects.
+MIT License - Free to use in personal and commercial projects
 
-## 🎉 Credits
+## Credits
+
 Built with:
-- **HTML5** - Structure
-- **CSS3** - Styling
-- **JavaScript (ES6+)** - Functionality
-- **Chart.js** - Data visualization
-- **Google Fonts** - Inter font family
-- **Material Icons** - Icon set
-
----
-
-**Prody Admin Panel** - Professional, Modern, Responsive ✨
+- HTML5 & CSS3
+- Vanilla JavaScript (ES6+)
+- Chart.js v4.4.1
+- Material Icons
+- Inter Font Family
