@@ -2306,3 +2306,33 @@ input {
 .btn-report-view:hover .material-icons {
     transform: translateX(4px);
 }
+
+/* ==========================================
+   MENU SEARCH HIGHLIGHT
+   ========================================== */
+.nav-item.search-highlight,
+.submenu-item.search-highlight {
+    background-color: var(--primary-light);
+    animation: pulse 0.5s ease-in-out;
+}
+
+@keyframes pulse {
+    0%, 100% { opacity: 1; }
+    50% { opacity: 0.7; }
+}
+
+.menu-no-results {
+    text-align: center;
+    padding: var(--spacing-xl);
+    color: var(--text-tertiary);
+}
+
+.menu-no-results .material-icons {
+    font-size: 48px;
+    margin-bottom: var(--spacing-md);
+    opacity: 0.5;
+}
+
+.menu-no-results p {
+    font-size: 14px;
+}

@@ -114,6 +114,15 @@ class AdminPanel {
                 clearTimeout(searchTimeout);
                 const query = e.target.value.toLowerCase().trim();
 
+                if (query.length === 0) {
+                    searchResults.classList.remove('active');
+                    this.resetMenuFilter();
+                    return;
+                }
+
+                // Filter menu items in real-time
+                this.filterMenuItems(query);
+
                 if (query.length < 2) {
                     searchResults.classList.remove('active');
                     return;
@@ -198,6 +207,102 @@ class AdminPanel {
         });
         if (items[index]) {
             items[index].scrollIntoView({ block: 'nearest' });
+        }
+    }
+
+    // ==========================================
+    // MENU/SUBMENU FILTER FUNCTIONALITY
+    // ==========================================
+    filterMenuItems(query) {
+        const navItems = document.querySelectorAll('.nav-item');
+        const submenuItems = document.querySelectorAll('.submenu-item');
+        let hasVisibleItems = false;
+
+        // Filter main menu items
+        navItems.forEach(item => {
+            const text = item.textContent.toLowerCase();
+            const matches = text.includes(query);
+            
+            if (matches) {
+                item.style.display = 'flex';
+                item.classList.add('search-highlight');
+                hasVisibleItems = true;
+                
+                // If item has submenu, show it
+                if (item.classList.contains('has-submenu')) {
+                    item.classList.add('submenu-open');
+                }
+            } else {
+                // Check if any submenu items match
+                const submenu = item.querySelector('.submenu');
+                if (submenu) {
+                    const submenuMatches = Array.from(submenu.querySelectorAll('.submenu-item'))
+                        .some(subItem => subItem.textContent.toLowerCase().includes(query));
+                    
+                    if (submenuMatches) {
+                        item.style.display = 'flex';
+                        item.classList.add('submenu-open');
+                        hasVisibleItems = true;
+                    } else {
+                        item.style.display = 'none';
+                        item.classList.remove('search-highlight');
+                    }
+                } else {
+                    item.style.display = 'none';
+                    item.classList.remove('search-highlight');
+                }
+            }
+        });
+
+        // Filter submenu items
+        submenuItems.forEach(item => {
+            const text = item.textContent.toLowerCase();
+            const matches = text.includes(query);
+            
+            if (matches) {
+                item.style.display = 'flex';
+                item.classList.add('search-highlight');
+                hasVisibleItems = true;
+            } else {
+                item.style.display = 'none';
+                item.classList.remove('search-highlight');
+            }
+        });
+
+        // Show "no results" message if nothing matches
+        this.toggleNoResultsMessage(!hasVisibleItems);
+    }
+
+    resetMenuFilter() {
+        const navItems = document.querySelectorAll('.nav-item');
+        const submenuItems = document.querySelectorAll('.submenu-item');
+        
+        navItems.forEach(item => {
+            item.style.display = 'flex';
+            item.classList.remove('search-highlight');
+        });
+
+        submenuItems.forEach(item => {
+            item.style.display = 'flex';
+            item.classList.remove('search-highlight');
+        });
+
+        this.toggleNoResultsMessage(false);
+    }
+
+    toggleNoResultsMessage(show) {
+        let noResults = document.querySelector('.menu-no-results');
+        
+        if (show && !noResults) {
+            noResults = document.createElement('div');
+            noResults.className = 'menu-no-results';
+            noResults.innerHTML = `
+                <span class="material-icons">search_off</span>
+                <p>No menu items found</p>
+            `;
+            document.querySelector('.sidebar-nav').appendChild(noResults);
+        } else if (!show && noResults) {
+            noResults.remove();
         }
     }
 
