@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to Prody Admin Panel</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        .welcome-page {
+            min-height: 100vh;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: var(--spacing-xl);
+        }
+        
+        .welcome-container {
+            max-width: 1200px;
+            width: 100%;
+        }
+        
+        .welcome-header {
+            text-align: center;
+            color: white;
+            margin-bottom: var(--spacing-2xl);
+        }
+        
+        .welcome-title {
+            font-size: 56px;
+            font-weight: 700;
+            margin-bottom: var(--spacing-md);
+            text-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+        
+        .welcome-subtitle {
+            font-size: 20px;
+            opacity: 0.9;
+            margin-bottom: var(--spacing-sm);
+        }
+        
+        .welcome-version {
+            display: inline-block;
+            padding: var(--spacing-xs) var(--spacing-md);
+            background-color: rgba(255, 255, 255, 0.2);
+            border-radius: var(--radius-full);
+            font-size: 14px;
+            backdrop-filter: blur(10px);
+        }
+        
+        .pages-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: var(--spacing-lg);
+        }
+        
+        .page-card {
+            background-color: white;
+            border-radius: var(--radius-xl);
+            padding: var(--spacing-xl);
+            box-shadow: var(--shadow-xl);
+            transition: all var(--transition-normal);
+            text-align: center;
+        }
+        
+        .page-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+        }
+        
+        .page-card-icon {
+            width: 72px;
+            height: 72px;
+            margin: 0 auto var(--spacing-lg);
+            border-radius: var(--radius-xl);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .page-card-icon .material-icons {
+            font-size: 36px;
+            color: white;
+        }
+        
+        .page-card h3 {
+            font-size: 20px;
+            font-weight: 600;
+            margin-bottom: var(--spacing-sm);
+            color: var(--text-primary);
+        }
+        
+        .page-card p {
+            font-size: 14px;
+            color: var(--text-secondary);
+            margin-bottom: var(--spacing-lg);
+        }
+        
+        .page-card-link {
+            display: inline-flex;
+            align-items: center;
+            gap: var(--spacing-xs);
+            padding: var(--spacing-sm) var(--spacing-lg);
+            background-color: var(--primary-color);
+            color: white;
+            border-radius: var(--radius-md);
+            font-weight: 500;
+            transition: all var(--transition-fast);
+        }
+        
+        .page-card-link:hover {
+            background-color: var(--primary-hover);
+            transform: scale(1.05);
+        }
+        
+        .footer-info {
+            text-align: center;
+            color: white;
+            margin-top: var(--spacing-2xl);
+            opacity: 0.9;
+        }
+    </style>
+</head>
+<body>
+    <div class="welcome-page">
+        <div class="welcome-container">
+            <div class="welcome-header">
+                <h1 class="welcome-title">Prody Admin Panel</h1>
+                <p class="welcome-subtitle">Professional Static Admin Dashboard</p>
+                <span class="welcome-version">v1.0.0</span>
+            </div>
+            
+            <div class="pages-grid">
+                <!-- Dashboard -->
+                <div class="page-card">
+                    <div class="page-card-icon" style="background: linear-gradient(135deg, #3b82f6, #2563eb);">
+                        <span class="material-icons">dashboard</span>
+                    </div>
+                    <h3>Dashboard</h3>
+                    <p>Main overview with stats, charts, and recent activity</p>
+                    <a href="dashboard.html" class="page-card-link">
+                        <span>View Page</span>
+                        <span class="material-icons" style="font-size: 18px;">arrow_forward</span>
+                    </a>
+                </div>
+                
+                <!-- Projects -->
+                <div class="page-card">
+                    <div class="page-card-icon" style="background: linear-gradient(135deg, #10b981, #059669);">
+                        <span class="material-icons">folder</span>
+                    </div>
+                    <h3>Projects</h3>
+                    <p>Project detail page with budget charts and deals table</p>
+                    <a href="index.html" class="page-card-link">
+                        <span>View Page</span>
+                        <span class="material-icons" style="font-size: 18px;">arrow_forward</span>
+                    </a>
+                </div>
+                
+                <!-- Analytics -->
+                <div class="page-card">
+                    <div class="page-card-icon" style="background: linear-gradient(135deg, #8b5cf6, #7c3aed);">
+                        <span class="material-icons">analytics</span>
+                    </div>
+                    <h3>Analytics</h3>
+                    <p>Website performance metrics and traffic analysis</p>
+                    <a href="analytics.html" class="page-card-link">
+                        <span>View Page</span>
+                        <span class="material-icons" style="font-size: 18px;">arrow_forward</span>
+                    </a>
+                </div>
+                
+                <!-- Reports -->
+                <div class="page-card">
+                    <div class="page-card-icon" style="background: linear-gradient(135deg, #f59e0b, #d97706);">
+                        <span class="material-icons">description</span>
+                    </div>
+                    <h3>Reports</h3>
+                    <p>Financial, sales, and customer reports with history</p>
+                    <a href="reports.html" class="page-card-link">
+                        <span>View Page</span>
+                        <span class="material-icons" style="font-size: 18px;">arrow_forward</span>
+                    </a>
+                </div>
+                
+                <!-- Companies -->
+                <div class="page-card">
+                    <div class="page-card-icon" style="background: linear-gradient(135deg, #6366f1, #4f46e5);">
+                        <span class="material-icons">business</span>
+                    </div>
+                    <h3>Companies</h3>
+                    <p>Complete company directory with search and filters</p>
+                    <a href="companies.html" class="page-card-link">
+                        <span>View Page</span>
+                        <span class="material-icons" style="font-size: 18px;">arrow_forward</span>
+                    </a>
+                </div>
+                
+                <!-- People -->
+                <div class="page-card">
+                    <div class="page-card-icon" style="background: linear-gradient(135deg, #ec4899, #db2777);">
+                        <span class="material-icons">people</span>
+                    </div>
+                    <h3>People</h3>
+                    <p>Team members directory with contact information</p>
+                    <a href="people.html" class="page-card-link">
+                        <span>View Page</span>
+                        <span class="material-icons" style="font-size: 18px;">arrow_forward</span>
+                    </a>
+                </div>
+                
+                <!-- 404 Page -->
+                <div class="page-card">
+                    <div class="page-card-icon" style="background: linear-gradient(135deg, #ef4444, #dc2626);">
+                        <span class="material-icons">error_outline</span>
+                    </div>
+                    <h3>404 Page</h3>
+                    <p>Error page for handling not found routes</p>
+                    <a href="404.html" class="page-card-link">
+                        <span>View Page</span>
+                        <span class="material-icons" style="font-size: 18px;">arrow_forward</span>
+                    </a>
+                </div>
+                
+                <!-- Maintenance -->
+                <div class="page-card">
+                    <div class="page-card-icon" style="background: linear-gradient(135deg, #f97316, #ea580c);">
+                        <span class="material-icons">construction</span>
+                    </div>
+                    <h3>Maintenance</h3>
+                    <p>Maintenance mode page with countdown timer</p>
+                    <a href="maintenance.html" class="page-card-link">
+                        <span>View Page</span>
+                        <span class="material-icons" style="font-size: 18px;">arrow_forward</span>
+                    </a>
+                </div>
+            </div>
+            
+            <div class="footer-info">
+                <p>✨ Complete admin panel with working features, animations, and responsive design</p>
+                <p style="margin-top: var(--spacing-sm);">Built with HTML, CSS, and JavaScript • See <a href="README.md" style="color: white; text-decoration: underline;">README.md</a> for documentation</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

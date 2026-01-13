@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reports | Prody Admin Panel</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <div class="sidebar-header">
+            <div class="logo">
+                <span class="material-icons logo-icon">dashboard</span>
+                <span class="logo-text">Prody</span>
+            </div>
+            <button class="sidebar-toggle">
+                <span class="material-icons">menu</span>
+            </button>
+        </div>
+
+        <div class="search-box">
+            <span class="material-icons">search</span>
+            <input type="text" placeholder="Search..." />
+            <span class="shortcut">⌘F</span>
+        </div>
+
+        <nav class="sidebar-nav">
+            <a href="dashboard.html" class="nav-item">
+                <span class="material-icons">dashboard</span>
+                <span>Dashboard</span>
+            </a>
+            <a href="index.html" class="nav-item has-submenu">
+                <span class="material-icons">folder</span>
+                <span>Projects</span>
+                <span class="badge">3/5</span>
+                <div class="submenu">
+                    <a href="index.html" class="submenu-item">
+                        <span class="material-icons">home</span>
+                        <span>House Spectrum Ltd</span>
+                    </a>
+                    <a href="#" class="submenu-item">
+                        <span class="material-icons">apartment</span>
+                        <span>Urban Tower</span>
+                    </a>
+                    <a href="#" class="submenu-item">
+                        <span class="material-icons">villa</span>
+                        <span>Green Valley</span>
+                    </a>
+                </div>
+            </a>
+            <a href="analytics.html" class="nav-item">
+                <span class="material-icons">analytics</span>
+                <span>Analytics</span>
+            </a>
+            <a href="reports.html" class="nav-item active has-submenu">
+                <span class="material-icons">description</span>
+                <span>Reports</span>
+                <span class="badge badge-new">New</span>
+                <div class="submenu">
+                    <a href="reports.html#financial" class="submenu-item active">
+                        <span class="material-icons">account_balance</span>
+                        <span>Financial</span>
+                    </a>
+                    <a href="reports.html#sales" class="submenu-item">
+                        <span class="material-icons">trending_up</span>
+                        <span>Sales</span>
+                    </a>
+                    <a href="reports.html#customer" class="submenu-item">
+                        <span class="material-icons">groups</span>
+                        <span>Customer</span>
+                    </a>
+                </div>
+            </a>
+            <a href="#" class="nav-item">
+                <span class="material-icons">extension</span>
+                <span>Extensions</span>
+            </a>
+            <a href="companies.html" class="nav-item">
+                <span class="material-icons">business</span>
+                <span>Companies</span>
+                <span class="badge">17</span>
+            </a>
+            <a href="people.html" class="nav-item">
+                <span class="material-icons">people</span>
+                <span>People</span>
+                <span class="badge">164</span>
+            </a>
+        </nav>
+
+        <div class="sidebar-footer">
+            <a href="#" class="footer-item">
+                <span class="material-icons">help_outline</span>
+                <span>Help center</span>
+            </a>
+            <a href="#" class="footer-item">
+                <span class="material-icons">notifications</span>
+                <span>Notifications</span>
+                <span class="badge badge-alert">2</span>
+            </a>
+            <a href="#" class="footer-item">
+                <span class="material-icons">account_circle</span>
+                <span>Ember Crest</span>
+            </a>
+            <div class="starter-overview">
+                <p class="overview-title">Starter set overview</p>
+                <p class="overview-subtitle">3 of 5 projects created</p>
+                <div class="progress-dots">
+                    <span class="dot filled"></span>
+                    <span class="dot filled"></span>
+                    <span class="dot filled"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </div>
+                <button class="btn-full-access">
+                    Get full access 🚀
+                </button>
+            </div>
+        </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Top Bar -->
+        <header class="topbar">
+            <div class="breadcrumb">
+                <span class="material-icons bc-icon">description</span>
+                <span class="bc-current">Reports</span>
+            </div>
+            <div class="topbar-actions">
+                <button class="btn-icon">
+                    <span class="material-icons">calendar_today</span>
+                    <span>This Month</span>
+                </button>
+                <button class="btn-icon">
+                    <span class="material-icons">download</span>
+                    <span>Export PDF</span>
+                </button>
+            </div>
+        </header>
+
+        <h1 class="page-title">Business Reports</h1>
+        <p class="page-subtitle">Comprehensive insights into your business performance</p>
+
+        <!-- Report Cards -->
+        <div class="report-cards fade-in-up">
+            <div class="report-card" id="financial">
+                <div class="report-card-header">
+                    <div class="report-icon financial">
+                        <span class="material-icons">account_balance</span>
+                    </div>
+                    <div>
+                        <h3 class="report-title">Financial Report</h3>
+                        <p class="report-date">Updated 2 hours ago</p>
+                    </div>
+                    <button class="btn-icon-sm">
+                        <span class="material-icons">more_vert</span>
+                    </button>
+                </div>
+                <div class="report-stats">
+                    <div class="report-stat">
+                        <span class="report-stat-label">Total Revenue</span>
+                        <span class="report-stat-value">$2.4M</span>
+                        <span class="report-stat-change positive">+12.5%</span>
+                    </div>
+                    <div class="report-stat">
+                        <span class="report-stat-label">Total Expenses</span>
+                        <span class="report-stat-value">$1.8M</span>
+                        <span class="report-stat-change negative">+5.2%</span>
+                    </div>
+                    <div class="report-stat">
+                        <span class="report-stat-label">Net Profit</span>
+                        <span class="report-stat-value">$600K</span>
+                        <span class="report-stat-change positive">+28.3%</span>
+                    </div>
+                </div>
+                <button class="btn-report-view">
+                    <span>View Full Report</span>
+                    <span class="material-icons">arrow_forward</span>
+                </button>
+            </div>
+
+            <div class="report-card" id="sales">
+                <div class="report-card-header">
+                    <div class="report-icon sales">
+                        <span class="material-icons">trending_up</span>
+                    </div>
+                    <div>
+                        <h3 class="report-title">Sales Report</h3>
+                        <p class="report-date">Updated 1 hour ago</p>
+                    </div>
+                    <button class="btn-icon-sm">
+                        <span class="material-icons">more_vert</span>
+                    </button>
+                </div>
+                <div class="report-stats">
+                    <div class="report-stat">
+                        <span class="report-stat-label">Total Sales</span>
+                        <span class="report-stat-value">3,247</span>
+                        <span class="report-stat-change positive">+18.7%</span>
+                    </div>
+                    <div class="report-stat">
+                        <span class="report-stat-label">Conversion Rate</span>
+                        <span class="report-stat-value">4.2%</span>
+                        <span class="report-stat-change positive">+0.8%</span>
+                    </div>
+                    <div class="report-stat">
+                        <span class="report-stat-label">Avg. Order Value</span>
+                        <span class="report-stat-value">$742</span>
+                        <span class="report-stat-change negative">-3.1%</span>
+                    </div>
+                </div>
+                <button class="btn-report-view">
+                    <span>View Full Report</span>
+                    <span class="material-icons">arrow_forward</span>
+                </button>
+            </div>
+
+            <div class="report-card" id="customer">
+                <div class="report-card-header">
+                    <div class="report-icon customer">
+                        <span class="material-icons">groups</span>
+                    </div>
+                    <div>
+                        <h3 class="report-title">Customer Report</h3>
+                        <p class="report-date">Updated 3 hours ago</p>
+                    </div>
+                    <button class="btn-icon-sm">
+                        <span class="material-icons">more_vert</span>
+                    </button>
+                </div>
+                <div class="report-stats">
+                    <div class="report-stat">
+                        <span class="report-stat-label">Active Customers</span>
+                        <span class="report-stat-value">1,892</span>
+                        <span class="report-stat-change positive">+15.3%</span>
+                    </div>
+                    <div class="report-stat">
+                        <span class="report-stat-label">New Customers</span>
+                        <span class="report-stat-value">247</span>
+                        <span class="report-stat-change positive">+22.1%</span>
+                    </div>
+                    <div class="report-stat">
+                        <span class="report-stat-label">Retention Rate</span>
+                        <span class="report-stat-value">87.5%</span>
+                        <span class="report-stat-change positive">+2.3%</span>
+                    </div>
+                </div>
+                <button class="btn-report-view">
+                    <span>View Full Report</span>
+                    <span class="material-icons">arrow_forward</span>
+                </button>
+            </div>
+        </div>
+
+        <!-- Charts Section -->
+        <div class="charts-row fade-in-up">
+            <div class="chart-section">
+                <div class="chart-header">
+                    <h2 class="chart-title">Revenue Breakdown</h2>
+                    <div class="time-filter">
+                        <button class="time-btn">Q1</button>
+                        <button class="time-btn">Q2</button>
+                        <button class="time-btn">Q3</button>
+                        <button class="time-btn active">Q4</button>
+                    </div>
+                </div>
+                <div class="chart-container" style="height: 300px;">
+                    <canvas id="revenueChart"></canvas>
+                </div>
+            </div>
+
+            <div class="chart-section">
+                <div class="chart-header">
+                    <h2 class="chart-title">Monthly Sales</h2>
+                </div>
+                <div class="chart-container" style="height: 300px;">
+                    <canvas id="salesChart"></canvas>
+                </div>
+            </div>
+        </div>
+
+        <!-- Detailed Reports Table -->
+        <div class="table-section fade-in-up">
+            <div class="table-header">
+                <div class="table-title">
+                    <span class="material-icons">summarize</span>
+                    <span>Report History</span>
+                </div>
+                <div class="table-actions">
+                    <button class="btn-action">
+                        <span class="material-icons">filter_list</span>
+                        <span>Filter</span>
+                    </button>
+                    <button class="btn-primary">
+                        <span class="material-icons">add</span>
+                        <span>Generate Report</span>
+                    </button>
+                </div>
+            </div>
+            <div class="table-wrapper">
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th data-sortable="name">Report Name</th>
+                            <th data-sortable="type">Type</th>
+                            <th data-sortable="date">Generated Date</th>
+                            <th data-sortable="period">Period</th>
+                            <th data-sortable="status">Status</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Q4 Financial Summary</td>
+                            <td>Financial</td>
+                            <td>Jan 10, 2026</td>
+                            <td>Oct - Dec 2025</td>
+                            <td><span class="status-badge active">Ready</span></td>
+                            <td>
+                                <button class="btn-icon-sm" title="Download">
+                                    <span class="material-icons">download</span>
+                                </button>
+                                <button class="btn-icon-sm" title="View">
+                                    <span class="material-icons">visibility</span>
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>December Sales Report</td>
+                            <td>Sales</td>
+                            <td>Jan 5, 2026</td>
+                            <td>December 2025</td>
+                            <td><span class="status-badge active">Ready</span></td>
+                            <td>
+                                <button class="btn-icon-sm" title="Download">
+                                    <span class="material-icons">download</span>
+                                </button>
+                                <button class="btn-icon-sm" title="View">
+                                    <span class="material-icons">visibility</span>
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Customer Analytics 2025</td>
+                            <td>Customer</td>
+                            <td>Jan 3, 2026</td>
+                            <td>Full Year 2025</td>
+                            <td><span class="status-badge pending">Processing</span></td>
+                            <td>
+                                <button class="btn-icon-sm" title="Download" disabled>
+                                    <span class="material-icons">download</span>
+                                </button>
+                                <button class="btn-icon-sm" title="View" disabled>
+                                    <span class="material-icons">visibility</span>
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>November Revenue Analysis</td>
+                            <td>Financial</td>
+                            <td>Dec 15, 2025</td>
+                            <td>November 2025</td>
+                            <td><span class="status-badge active">Ready</span></td>
+                            <td>
+                                <button class="btn-icon-sm" title="Download">
+                                    <span class="material-icons">download</span>
+                                </button>
+                                <button class="btn-icon-sm" title="View">
+                                    <span class="material-icons">visibility</span>
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>Q3 Performance Summary</td>
+                            <td>Sales</td>
+                            <td>Oct 5, 2025</td>
+                            <td>Jul - Sep 2025</td>
+                            <td><span class="status-badge active">Ready</span></td>
+                            <td>
+                                <button class="btn-icon-sm" title="Download">
+                                    <span class="material-icons">download</span>
+                                </button>
+                                <button class="btn-icon-sm" title="View">
+                                    <span class="material-icons">visibility</span>
+                                </button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </main>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/charts.js"></script>
+</body>
+</html>

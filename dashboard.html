@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard | Prody Admin Panel</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <div class="sidebar-header">
+            <div class="logo">
+                <span class="material-icons logo-icon">dashboard</span>
+                <span class="logo-text">Prody</span>
+            </div>
+            <button class="sidebar-toggle">
+                <span class="material-icons">menu</span>
+            </button>
+        </div>
+
+        <div class="search-box">
+            <span class="material-icons">search</span>
+            <input type="text" placeholder="Search..." />
+            <span class="shortcut">⌘F</span>
+        </div>
+
+        <nav class="sidebar-nav">
+            <a href="dashboard.html" class="nav-item active">
+                <span class="material-icons">dashboard</span>
+                <span>Dashboard</span>
+            </a>
+            <a href="index.html" class="nav-item has-submenu">
+                <span class="material-icons">folder</span>
+                <span>Projects</span>
+                <span class="badge">3/5</span>
+                <div class="submenu">
+                    <a href="index.html" class="submenu-item">
+                        <span class="material-icons">home</span>
+                        <span>House Spectrum Ltd</span>
+                    </a>
+                    <a href="#" class="submenu-item">
+                        <span class="material-icons">apartment</span>
+                        <span>Urban Tower</span>
+                    </a>
+                    <a href="#" class="submenu-item">
+                        <span class="material-icons">villa</span>
+                        <span>Green Valley</span>
+                    </a>
+                </div>
+            </a>
+            <a href="analytics.html" class="nav-item">
+                <span class="material-icons">analytics</span>
+                <span>Analytics</span>
+            </a>
+            <a href="reports.html" class="nav-item has-submenu">
+                <span class="material-icons">description</span>
+                <span>Reports</span>
+                <span class="badge badge-new">New</span>
+                <div class="submenu">
+                    <a href="reports.html#financial" class="submenu-item">
+                        <span class="material-icons">account_balance</span>
+                        <span>Financial</span>
+                    </a>
+                    <a href="reports.html#sales" class="submenu-item">
+                        <span class="material-icons">trending_up</span>
+                        <span>Sales</span>
+                    </a>
+                    <a href="reports.html#customer" class="submenu-item">
+                        <span class="material-icons">groups</span>
+                        <span>Customer</span>
+                    </a>
+                </div>
+            </a>
+            <a href="#" class="nav-item">
+                <span class="material-icons">extension</span>
+                <span>Extensions</span>
+            </a>
+            <a href="companies.html" class="nav-item">
+                <span class="material-icons">business</span>
+                <span>Companies</span>
+                <span class="badge">17</span>
+            </a>
+            <a href="people.html" class="nav-item">
+                <span class="material-icons">people</span>
+                <span>People</span>
+                <span class="badge">164</span>
+            </a>
+        </nav>
+
+        <div class="sidebar-footer">
+            <a href="#" class="footer-item">
+                <span class="material-icons">help_outline</span>
+                <span>Help center</span>
+            </a>
+            <a href="#" class="footer-item">
+                <span class="material-icons">notifications</span>
+                <span>Notifications</span>
+                <span class="badge badge-alert">2</span>
+            </a>
+            <a href="#" class="footer-item">
+                <span class="material-icons">account_circle</span>
+                <span>Ember Crest</span>
+            </a>
+            <div class="starter-overview">
+                <p class="overview-title">Starter set overview</p>
+                <p class="overview-subtitle">3 of 5 projects created</p>
+                <div class="progress-dots">
+                    <span class="dot filled"></span>
+                    <span class="dot filled"></span>
+                    <span class="dot filled"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </div>
+                <button class="btn-full-access">
+                    Get full access 🚀
+                </button>
+            </div>
+        </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Top Bar -->
+        <header class="topbar">
+            <div class="breadcrumb">
+                <span class="material-icons bc-icon">dashboard</span>
+                <span class="bc-current">Dashboard</span>
+            </div>
+            <div class="topbar-actions">
+                <button class="btn-icon" data-dropdown="time-dropdown">
+                    <span class="material-icons">calendar_today</span>
+                    <span>Last 30 days</span>
+                    <span class="material-icons">expand_more</span>
+                </button>
+                <button class="btn-icon">
+                    <span class="material-icons">settings</span>
+                </button>
+            </div>
+        </header>
+
+        <!-- Stats Cards -->
+        <div class="stats-grid fade-in-up">
+            <div class="stat-card-lg">
+                <div class="stat-card-header">
+                    <span class="stat-label">Total Revenue</span>
+                    <span class="material-icons stat-icon-sm">trending_up</span>
+                </div>
+                <div class="stat-card-body">
+                    <h2 class="stat-value-lg" data-count="145632">0</h2>
+                    <span class="stat-change positive">
+                        <span class="material-icons">arrow_upward</span>
+                        12.5%
+                    </span>
+                </div>
+                <div class="stat-card-footer">
+                    <span class="material-icons">info_outline</span>
+                    <span>vs. last month</span>
+                </div>
+            </div>
+
+            <div class="stat-card-lg">
+                <div class="stat-card-header">
+                    <span class="stat-label">Total Orders</span>
+                    <span class="material-icons stat-icon-sm">shopping_cart</span>
+                </div>
+                <div class="stat-card-body">
+                    <h2 class="stat-value-lg" data-count="2847">0</h2>
+                    <span class="stat-change positive">
+                        <span class="material-icons">arrow_upward</span>
+                        8.3%
+                    </span>
+                </div>
+                <div class="stat-card-footer">
+                    <span class="material-icons">info_outline</span>
+                    <span>vs. last month</span>
+                </div>
+            </div>
+
+            <div class="stat-card-lg">
+                <div class="stat-card-header">
+                    <span class="stat-label">New Customers</span>
+                    <span class="material-icons stat-icon-sm">people</span>
+                </div>
+                <div class="stat-card-body">
+                    <h2 class="stat-value-lg" data-count="1256">0</h2>
+                    <span class="stat-change negative">
+                        <span class="material-icons">arrow_downward</span>
+                        3.2%
+                    </span>
+                </div>
+                <div class="stat-card-footer">
+                    <span class="material-icons">info_outline</span>
+                    <span>vs. last month</span>
+                </div>
+            </div>
+
+            <div class="stat-card-lg">
+                <div class="stat-card-header">
+                    <span class="stat-label">Active Projects</span>
+                    <span class="material-icons stat-icon-sm">folder</span>
+                </div>
+                <div class="stat-card-body">
+                    <h2 class="stat-value-lg" data-count="42">0</h2>
+                    <span class="stat-change positive">
+                        <span class="material-icons">arrow_upward</span>
+                        5.7%
+                    </span>
+                </div>
+                <div class="stat-card-footer">
+                    <span class="material-icons">info_outline</span>
+                    <span>vs. last month</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Charts Row -->
+        <div class="charts-row fade-in-up">
+            <!-- Sales Chart -->
+            <div class="chart-section" style="flex: 2;">
+                <div class="chart-header">
+                    <h2 class="chart-title">Sales Overview</h2>
+                    <div class="chart-controls">
+                        <div class="time-filter">
+                            <button class="time-btn">Week</button>
+                            <button class="time-btn">Month</button>
+                            <button class="time-btn active">Year</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="chart-container" style="height: 300px;">
+                    <canvas id="salesChart"></canvas>
+                </div>
+            </div>
+
+            <!-- Doughnut Chart -->
+            <div class="chart-section" style="flex: 1;">
+                <div class="chart-header">
+                    <h2 class="chart-title">Traffic Sources</h2>
+                </div>
+                <div class="chart-container" style="height: 300px;">
+                    <canvas id="doughnutChart"></canvas>
+                </div>
+            </div>
+        </div>
+
+        <!-- Recent Activity & Top Products -->
+        <div class="activity-row fade-in-up">
+            <!-- Recent Activity -->
+            <div class="activity-section">
+                <div class="section-header">
+                    <h2 class="section-title">Recent Activity</h2>
+                    <a href="#" class="link-view-all">View All</a>
+                </div>
+                <div class="activity-list">
+                    <div class="activity-item">
+                        <div class="activity-icon blue">
+                            <span class="material-icons">shopping_cart</span>
+                        </div>
+                        <div class="activity-content">
+                            <p class="activity-title">New order received</p>
+                            <p class="activity-time">5 minutes ago</p>
+                        </div>
+                    </div>
+                    <div class="activity-item">
+                        <div class="activity-icon green">
+                            <span class="material-icons">person_add</span>
+                        </div>
+                        <div class="activity-content">
+                            <p class="activity-title">New customer registered</p>
+                            <p class="activity-time">1 hour ago</p>
+                        </div>
+                    </div>
+                    <div class="activity-item">
+                        <div class="activity-icon orange">
+                            <span class="material-icons">credit_card</span>
+                        </div>
+                        <div class="activity-content">
+                            <p class="activity-title">Payment received $2,345</p>
+                            <p class="activity-time">2 hours ago</p>
+                        </div>
+                    </div>
+                    <div class="activity-item">
+                        <div class="activity-icon purple">
+                            <span class="material-icons">assignment</span>
+                        </div>
+                        <div class="activity-content">
+                            <p class="activity-title">New project created</p>
+                            <p class="activity-time">3 hours ago</p>
+                        </div>
+                    </div>
+                    <div class="activity-item">
+                        <div class="activity-icon red">
+                            <span class="material-icons">warning</span>
+                        </div>
+                        <div class="activity-content">
+                            <p class="activity-title">Server alert triggered</p>
+                            <p class="activity-time">5 hours ago</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Top Products -->
+            <div class="top-products-section">
+                <div class="section-header">
+                    <h2 class="section-title">Top Products</h2>
+                    <a href="#" class="link-view-all">View All</a>
+                </div>
+                <div class="products-list">
+                    <div class="product-item">
+                        <div class="product-info">
+                            <div class="product-icon" style="background: #dbeafe;">
+                                <span class="material-icons" style="color: #3b82f6;">laptop</span>
+                            </div>
+                            <div>
+                                <p class="product-name">MacBook Pro</p>
+                                <p class="product-sales">1,245 sales</p>
+                            </div>
+                        </div>
+                        <div class="product-revenue">$1.2M</div>
+                    </div>
+                    <div class="product-item">
+                        <div class="product-info">
+                            <div class="product-icon" style="background: #d1fae5;">
+                                <span class="material-icons" style="color: #10b981;">phone_iphone</span>
+                            </div>
+                            <div>
+                                <p class="product-name">iPhone 15 Pro</p>
+                                <p class="product-sales">987 sales</p>
+                            </div>
+                        </div>
+                        <div class="product-revenue">$980K</div>
+                    </div>
+                    <div class="product-item">
+                        <div class="product-info">
+                            <div class="product-icon" style="background: #fed7aa;">
+                                <span class="material-icons" style="color: #f59e0b;">headphones</span>
+                            </div>
+                            <div>
+                                <p class="product-name">AirPods Max</p>
+                                <p class="product-sales">756 sales</p>
+                            </div>
+                        </div>
+                        <div class="product-revenue">$425K</div>
+                    </div>
+                    <div class="product-item">
+                        <div class="product-info">
+                            <div class="product-icon" style="background: #e0e7ff;">
+                                <span class="material-icons" style="color: #6366f1;">watch</span>
+                            </div>
+                            <div>
+                                <p class="product-name">Apple Watch</p>
+                                <p class="product-sales">654 sales</p>
+                            </div>
+                        </div>
+                        <div class="product-revenue">$327K</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Dropdown for time filter -->
+    <div id="time-dropdown" class="dropdown-menu">
+        <div class="dropdown-item">Last 7 days</div>
+        <div class="dropdown-item">Last 30 days</div>
+        <div class="dropdown-item">Last 3 months</div>
+        <div class="dropdown-item">Last year</div>
+        <div class="dropdown-divider"></div>
+        <div class="dropdown-item">Custom range</div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/charts.js"></script>
+</body>
+</html>

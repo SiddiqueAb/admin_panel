@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analytics | Prody Admin Panel</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Sidebar -->
+    <aside class="sidebar">
+        <div class="sidebar-header">
+            <div class="logo">
+                <span class="material-icons logo-icon">dashboard</span>
+                <span class="logo-text">Prody</span>
+            </div>
+            <button class="sidebar-toggle">
+                <span class="material-icons">menu</span>
+            </button>
+        </div>
+
+        <div class="search-box">
+            <span class="material-icons">search</span>
+            <input type="text" placeholder="Search..." />
+            <span class="shortcut">⌘F</span>
+        </div>
+
+        <nav class="sidebar-nav">
+            <a href="dashboard.html" class="nav-item">
+                <span class="material-icons">dashboard</span>
+                <span>Dashboard</span>
+            </a>
+            <a href="index.html" class="nav-item has-submenu">
+                <span class="material-icons">folder</span>
+                <span>Projects</span>
+                <span class="badge">3/5</span>
+                <div class="submenu">
+                    <a href="index.html" class="submenu-item">
+                        <span class="material-icons">home</span>
+                        <span>House Spectrum Ltd</span>
+                    </a>
+                    <a href="#" class="submenu-item">
+                        <span class="material-icons">apartment</span>
+                        <span>Urban Tower</span>
+                    </a>
+                    <a href="#" class="submenu-item">
+                        <span class="material-icons">villa</span>
+                        <span>Green Valley</span>
+                    </a>
+                </div>
+            </a>
+            <a href="analytics.html" class="nav-item active">
+                <span class="material-icons">analytics</span>
+                <span>Analytics</span>
+            </a>
+            <a href="reports.html" class="nav-item has-submenu">
+                <span class="material-icons">description</span>
+                <span>Reports</span>
+                <span class="badge badge-new">New</span>
+                <div class="submenu">
+                    <a href="reports.html#financial" class="submenu-item">
+                        <span class="material-icons">account_balance</span>
+                        <span>Financial</span>
+                    </a>
+                    <a href="reports.html#sales" class="submenu-item">
+                        <span class="material-icons">trending_up</span>
+                        <span>Sales</span>
+                    </a>
+                    <a href="reports.html#customer" class="submenu-item">
+                        <span class="material-icons">groups</span>
+                        <span>Customer</span>
+                    </a>
+                </div>
+            </a>
+            <a href="#" class="nav-item">
+                <span class="material-icons">extension</span>
+                <span>Extensions</span>
+            </a>
+            <a href="companies.html" class="nav-item">
+                <span class="material-icons">business</span>
+                <span>Companies</span>
+                <span class="badge">17</span>
+            </a>
+            <a href="people.html" class="nav-item">
+                <span class="material-icons">people</span>
+                <span>People</span>
+                <span class="badge">164</span>
+            </a>
+        </nav>
+
+        <div class="sidebar-footer">
+            <a href="#" class="footer-item">
+                <span class="material-icons">help_outline</span>
+                <span>Help center</span>
+            </a>
+            <a href="#" class="footer-item">
+                <span class="material-icons">notifications</span>
+                <span>Notifications</span>
+                <span class="badge badge-alert">2</span>
+            </a>
+            <a href="#" class="footer-item">
+                <span class="material-icons">account_circle</span>
+                <span>Ember Crest</span>
+            </a>
+            <div class="starter-overview">
+                <p class="overview-title">Starter set overview</p>
+                <p class="overview-subtitle">3 of 5 projects created</p>
+                <div class="progress-dots">
+                    <span class="dot filled"></span>
+                    <span class="dot filled"></span>
+                    <span class="dot filled"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </div>
+                <button class="btn-full-access">
+                    Get full access 🚀
+                </button>
+            </div>
+        </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Top Bar -->
+        <header class="topbar">
+            <div class="breadcrumb">
+                <span class="material-icons bc-icon">analytics</span>
+                <span class="bc-current">Analytics</span>
+            </div>
+            <div class="topbar-actions">
+                <button class="btn-icon">
+                    <span class="material-icons">download</span>
+                    <span>Export</span>
+                </button>
+                <button class="btn-icon">
+                    <span class="material-icons">settings</span>
+                </button>
+            </div>
+        </header>
+
+        <!-- Analytics Overview -->
+        <h1 class="page-title">Analytics Overview</h1>
+        <p class="page-subtitle">Track your website performance and user behavior</p>
+
+        <!-- Metrics Grid -->
+        <div class="stats-grid fade-in-up">
+            <div class="stat-card-lg">
+                <div class="stat-card-header">
+                    <span class="stat-label">Page Views</span>
+                    <span class="material-icons stat-icon-sm">visibility</span>
+                </div>
+                <div class="stat-card-body">
+                    <h2 class="stat-value-lg" data-count="24567">0</h2>
+                    <span class="stat-change positive">
+                        <span class="material-icons">arrow_upward</span>
+                        15.3%
+                    </span>
+                </div>
+                <div class="stat-card-footer">
+                    <span class="material-icons">info_outline</span>
+                    <span>vs. last week</span>
+                </div>
+            </div>
+
+            <div class="stat-card-lg">
+                <div class="stat-card-header">
+                    <span class="stat-label">Unique Visitors</span>
+                    <span class="material-icons stat-icon-sm">person</span>
+                </div>
+                <div class="stat-card-body">
+                    <h2 class="stat-value-lg" data-count="12890">0</h2>
+                    <span class="stat-change positive">
+                        <span class="material-icons">arrow_upward</span>
+                        8.7%
+                    </span>
+                </div>
+                <div class="stat-card-footer">
+                    <span class="material-icons">info_outline</span>
+                    <span>vs. last week</span>
+                </div>
+            </div>
+
+            <div class="stat-card-lg">
+                <div class="stat-card-header">
+                    <span class="stat-label">Bounce Rate</span>
+                    <span class="material-icons stat-icon-sm">exit_to_app</span>
+                </div>
+                <div class="stat-card-body">
+                    <h2 class="stat-value-lg">42.5%</h2>
+                    <span class="stat-change negative">
+                        <span class="material-icons">arrow_upward</span>
+                        2.1%
+                    </span>
+                </div>
+                <div class="stat-card-footer">
+                    <span class="material-icons">info_outline</span>
+                    <span>vs. last week</span>
+                </div>
+            </div>
+
+            <div class="stat-card-lg">
+                <div class="stat-card-header">
+                    <span class="stat-label">Avg. Session</span>
+                    <span class="material-icons stat-icon-sm">schedule</span>
+                </div>
+                <div class="stat-card-body">
+                    <h2 class="stat-value-lg">4:35</h2>
+                    <span class="stat-change positive">
+                        <span class="material-icons">arrow_upward</span>
+                        5.2%
+                    </span>
+                </div>
+                <div class="stat-card-footer">
+                    <span class="material-icons">info_outline</span>
+                    <span>vs. last week</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Analytics Chart -->
+        <div class="chart-section fade-in-up">
+            <div class="chart-header">
+                <h2 class="chart-title">Traffic Analysis</h2>
+                <div class="chart-controls">
+                    <div class="time-filter">
+                        <button class="time-btn">7D</button>
+                        <button class="time-btn active">30D</button>
+                        <button class="time-btn">90D</button>
+                        <button class="time-btn">1Y</button>
+                    </div>
+                </div>
+            </div>
+            <div class="chart-container" style="height: 400px;">
+                <canvas id="analyticsChart"></canvas>
+            </div>
+        </div>
+
+        <!-- Device & Browser Stats -->
+        <div class="charts-row fade-in-up">
+            <div class="chart-section">
+                <div class="chart-header">
+                    <h2 class="chart-title">Traffic by Device</h2>
+                </div>
+                <div class="chart-container" style="height: 300px;">
+                    <canvas id="doughnutChart"></canvas>
+                </div>
+            </div>
+
+            <div class="chart-section">
+                <div class="chart-header">
+                    <h2 class="chart-title">Weekly Visitors</h2>
+                </div>
+                <div class="chart-container" style="height: 300px;">
+                    <canvas id="barChart"></canvas>
+                </div>
+            </div>
+        </div>
+
+        <!-- Top Pages -->
+        <div class="table-section fade-in-up">
+            <div class="table-header">
+                <div class="table-title">
+                    <span class="material-icons">article</span>
+                    <span>Top Pages</span>
+                </div>
+            </div>
+            <div class="table-wrapper">
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th data-sortable="page">Page URL</th>
+                            <th data-sortable="views">Page Views</th>
+                            <th data-sortable="unique">Unique Views</th>
+                            <th data-sortable="duration">Avg. Duration</th>
+                            <th data-sortable="bounce">Bounce Rate</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>/dashboard</td>
+                            <td>4,892</td>
+                            <td>3,456</td>
+                            <td>5:23</td>
+                            <td>32.5%</td>
+                        </tr>
+                        <tr>
+                            <td>/projects</td>
+                            <td>3,421</td>
+                            <td>2,891</td>
+                            <td>4:12</td>
+                            <td>38.2%</td>
+                        </tr>
+                        <tr>
+                            <td>/analytics</td>
+                            <td>2,965</td>
+                            <td>2,543</td>
+                            <td>6:45</td>
+                            <td>28.7%</td>
+                        </tr>
+                        <tr>
+                            <td>/companies</td>
+                            <td>2,134</td>
+                            <td>1,987</td>
+                            <td>3:56</td>
+                            <td>45.1%</td>
+                        </tr>
+                        <tr>
+                            <td>/reports</td>
+                            <td>1,876</td>
+                            <td>1,654</td>
+                            <td>7:12</td>
+                            <td>25.3%</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </main>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.1/dist/chart.umd.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/charts.js"></script>
+</body>
+</html>

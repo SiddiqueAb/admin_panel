@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Companies | Prody Admin Panel</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Sidebar (Same as other pages) -->
+    <aside class="sidebar">
+        <div class="sidebar-header">
+            <div class="logo">
+                <span class="material-icons logo-icon">dashboard</span>
+                <span class="logo-text">Prody</span>
+            </div>
+            <button class="sidebar-toggle">
+                <span class="material-icons">menu</span>
+            </button>
+        </div>
+
+        <div class="search-box">
+            <span class="material-icons">search</span>
+            <input type="text" placeholder="Search..." />
+            <span class="shortcut">⌘F</span>
+        </div>
+
+        <nav class="sidebar-nav">
+            <a href="dashboard.html" class="nav-item">
+                <span class="material-icons">dashboard</span>
+                <span>Dashboard</span>
+            </a>
+            <a href="index.html" class="nav-item has-submenu">
+                <span class="material-icons">folder</span>
+                <span>Projects</span>
+                <span class="badge">3/5</span>
+                <div class="submenu">
+                    <a href="index.html" class="submenu-item">
+                        <span class="material-icons">home</span>
+                        <span>House Spectrum Ltd</span>
+                    </a>
+                    <a href="#" class="submenu-item">
+                        <span class="material-icons">apartment</span>
+                        <span>Urban Tower</span>
+                    </a>
+                    <a href="#" class="submenu-item">
+                        <span class="material-icons">villa</span>
+                        <span>Green Valley</span>
+                    </a>
+                </div>
+            </a>
+            <a href="analytics.html" class="nav-item">
+                <span class="material-icons">analytics</span>
+                <span>Analytics</span>
+            </a>
+            <a href="reports.html" class="nav-item has-submenu">
+                <span class="material-icons">description</span>
+                <span>Reports</span>
+                <span class="badge badge-new">New</span>
+                <div class="submenu">
+                    <a href="reports.html#financial" class="submenu-item">
+                        <span class="material-icons">account_balance</span>
+                        <span>Financial</span>
+                    </a>
+                    <a href="reports.html#sales" class="submenu-item">
+                        <span class="material-icons">trending_up</span>
+                        <span>Sales</span>
+                    </a>
+                    <a href="reports.html#customer" class="submenu-item">
+                        <span class="material-icons">groups</span>
+                        <span>Customer</span>
+                    </a>
+                </div>
+            </a>
+            <a href="#" class="nav-item">
+                <span class="material-icons">extension</span>
+                <span>Extensions</span>
+            </a>
+            <a href="companies.html" class="nav-item active">
+                <span class="material-icons">business</span>
+                <span>Companies</span>
+                <span class="badge">17</span>
+            </a>
+            <a href="people.html" class="nav-item">
+                <span class="material-icons">people</span>
+                <span>People</span>
+                <span class="badge">164</span>
+            </a>
+        </nav>
+
+        <div class="sidebar-footer">
+            <a href="#" class="footer-item">
+                <span class="material-icons">help_outline</span>
+                <span>Help center</span>
+            </a>
+            <a href="#" class="footer-item">
+                <span class="material-icons">notifications</span>
+                <span>Notifications</span>
+                <span class="badge badge-alert">2</span>
+            </a>
+            <a href="#" class="footer-item">
+                <span class="material-icons">account_circle</span>
+                <span>Ember Crest</span>
+            </a>
+            <div class="starter-overview">
+                <p class="overview-title">Starter set overview</p>
+                <p class="overview-subtitle">3 of 5 projects created</p>
+                <div class="progress-dots">
+                    <span class="dot filled"></span>
+                    <span class="dot filled"></span>
+                    <span class="dot filled"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </div>
+                <button class="btn-full-access">
+                    Get full access 🚀
+                </button>
+            </div>
+        </div>
+    </aside>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Top Bar -->
+        <header class="topbar">
+            <div class="breadcrumb">
+                <span class="material-icons bc-icon">business</span>
+                <span class="bc-current">Companies</span>
+            </div>
+            <div class="topbar-actions">
+                <button class="btn-icon">
+                    <span class="material-icons">filter_list</span>
+                    <span>Filter</span>
+                </button>
+                <button class="btn-primary" data-modal="addCompanyModal">
+                    <span class="material-icons">add</span>
+                    <span>Add Company</span>
+                </button>
+            </div>
+        </header>
+
+        <h1 class="page-title">Company Directory</h1>
+        <p class="page-subtitle">Manage all your business partners and clients</p>
+
+        <!-- Search and Filters -->
+        <div class="table-section fade-in-up">
+            <div class="table-header">
+                <div class="table-search">
+                    <span class="material-icons">search</span>
+                    <input type="text" placeholder="Search companies..." />
+                </div>
+                <div class="table-actions">
+                    <button class="btn-action">
+                        <span class="material-icons">sort</span>
+                        <span>Sort</span>
+                    </button>
+                    <button class="btn-action">
+                        <span class="material-icons">view_list</span>
+                    </button>
+                    <button class="btn-action">
+                        <span class="material-icons">download</span>
+                        <span>Export</span>
+                    </button>
+                </div>
+            </div>
+
+            <div class="table-wrapper">
+                <table class="data-table">
+                    <thead>
+                        <tr>
+                            <th><input type="checkbox" /></th>
+                            <th data-sortable="company">Company</th>
+                            <th data-sortable="industry">Industry</th>
+                            <th data-sortable="location">Location</th>
+                            <th data-sortable="employees">Employees</th>
+                            <th data-sortable="revenue">Revenue</th>
+                            <th data-sortable="status">Status</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td><input type="checkbox" /></td>
+                            <td>
+                                <div class="contact-cell">
+                                    <div class="company-logo" style="background: #dbeafe;">
+                                        <span class="material-icons" style="color: #3b82f6;">business</span>
+                                    </div>
+                                    <div>
+                                        <div style="font-weight: 500;">Tech Innovations Inc</div>
+                                        <div style="font-size: 12px; color: var(--text-tertiary);">tech-innovations.com</div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>Technology</td>
+                            <td>San Francisco, CA</td>
+                            <td>250-500</td>
+                            <td>$15.2M</td>
+                            <td><span class="status-badge active">Active</span></td>
+                            <td>
+                                <button class="btn-icon-sm">
+                                    <span class="material-icons">more_vert</span>
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox" /></td>
+                            <td>
+                                <div class="contact-cell">
+                                    <div class="company-logo" style="background: #d1fae5;">
+                                        <span class="material-icons" style="color: #10b981;">store</span>
+                                    </div>
+                                    <div>
+                                        <div style="font-weight: 500;">Global Retail Solutions</div>
+                                        <div style="font-size: 12px; color: var(--text-tertiary);">globalretail.com</div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>Retail</td>
+                            <td>New York, NY</td>
+                            <td>1000+</td>
+                            <td>$42.8M</td>
+                            <td><span class="status-badge active">Active</span></td>
+                            <td>
+                                <button class="btn-icon-sm">
+                                    <span class="material-icons">more_vert</span>
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox" /></td>
+                            <td>
+                                <div class="contact-cell">
+                                    <div class="company-logo" style="background: #fed7aa;">
+                                        <span class="material-icons" style="color: #f59e0b;">apartment</span>
+                                    </div>
+                                    <div>
+                                        <div style="font-weight: 500;">Property Masters LLC</div>
+                                        <div style="font-size: 12px; color: var(--text-tertiary);">propertymasters.com</div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>Real Estate</td>
+                            <td>Miami, FL</td>
+                            <td>50-100</td>
+                            <td>$8.5M</td>
+                            <td><span class="status-badge pending">Pending</span></td>
+                            <td>
+                                <button class="btn-icon-sm">
+                                    <span class="material-icons">more_vert</span>
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox" /></td>
+                            <td>
+                                <div class="contact-cell">
+                                    <div class="company-logo" style="background: #e0e7ff;">
+                                        <span class="material-icons" style="color: #6366f1;">local_hospital</span>
+                                    </div>
+                                    <div>
+                                        <div style="font-weight: 500;">HealthCare Plus</div>
+                                        <div style="font-size: 12px; color: var(--text-tertiary);">healthcareplus.com</div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>Healthcare</td>
+                            <td>Boston, MA</td>
+                            <td>500-1000</td>
+                            <td>$28.3M</td>
+                            <td><span class="status-badge active">Active</span></td>
+                            <td>
+                                <button class="btn-icon-sm">
+                                    <span class="material-icons">more_vert</span>
+                                </button>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><input type="checkbox" /></td>
+                            <td>
+                                <div class="contact-cell">
+                                    <div class="company-logo" style="background: #fce7f3;">
+                                        <span class="material-icons" style="color: #ec4899;">restaurant</span>
+                                    </div>
+                                    <div>
+                                        <div style="font-weight: 500;">Culinary Delights Group</div>
+                                        <div style="font-size: 12px; color: var(--text-tertiary);">culinarydelights.com</div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>Food & Beverage</td>
+                            <td>Chicago, IL</td>
+                            <td>100-250</td>
+                            <td>$5.7M</td>
+                            <td><span class="status-badge inactive">Inactive</span></td>
+                            <td>
+                                <button class="btn-icon-sm">
+                                    <span class="material-icons">more_vert</span>
+                                </button>
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+
+            <!-- Pagination -->
+            <div class="pagination">
+                <button class="page-btn" disabled>
+                    <span class="material-icons">chevron_left</span>
+                </button>
+                <button class="page-btn active">1</button>
+                <button class="page-btn">2</button>
+                <button class="page-btn">3</button>
+                <button class="page-btn">4</button>
+                <button class="page-btn">
+                    <span class="material-icons">chevron_right</span>
+                </button>
+            </div>
+        </div>
+    </main>
+
+    <!-- Scripts -->
+    <script src="js/main.js"></script>
+</body>
+</html>
